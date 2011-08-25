@@ -1,0 +1,10 @@
+<% form_for(@article) do |f| %>
+<p><%= f.error_messages %></p>
+<p><%= f.label :title%></p>
+<%= f.text_field :title %>
+<p><%= f.label :slug%></p>
+<%= f.text_field :slug %>
+<p><%= f.label :content %></p>
+<%= f.text_field :content%>
+<%= f.submit %>
+<% end %>
