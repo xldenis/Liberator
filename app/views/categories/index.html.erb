@@ -1,0 +1,7 @@
+
+<% @categories.each do |category| %>
+<%= category.name %>
+<%= category.articles.desc.limit(5).each do |article| %>
+
+<% end %>
+<% end %>

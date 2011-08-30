@@ -1,5 +1,5 @@
 <% @article.each do |article| %>
 
-<p><%= article.title %></p>
+<p><%= article.title %> <% if can? :update, article%><%=link_to "Edit Article",edit_article_path(article)%><% end %><% if can? :destroy, article %> <%= link_to "Delete",article,:method => :delete %><% end %></p>
 
 <% end %>

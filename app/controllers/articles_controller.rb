@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
+  load_and_authorize_resource
   def index
     @article = Article.all
   end
   def create
-    @article = Article.new
+    @article = current_user.articles.new
     if @article.update_attributes(params[:article]) && @article.save
       flash[:notice]= "Article successfully created."
       redirect_to @article

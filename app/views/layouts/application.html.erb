@@ -12,15 +12,17 @@
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
-      <% if user_signed_in? %>
         <div class="admin">
           <% if can? :manage, @users %>
             <%= link_to "Add User", new_user_path %>
           <% end %>
+          <% if user_signed_in? %>
           <%= link_to "My Account", edit_user_registration_path %>
           <%= link_to "logout", destroy_user_session_path %>
+          <% else %>
+          <%= link_to "Login", new_user_session_path %>
+          <% end %>
         </div>
-      <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
