@@ -1,0 +1,13 @@
+.article{
+background-color:#333;
+}
+
+.article #head{
+width:400px;
+height:200px;
+
+}
+.article .secondary {
+width:200px;
+height:100px;
+}
