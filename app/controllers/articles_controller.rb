@@ -6,11 +6,14 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new
     if @article.update_attributes(params[:article]) && @article.save
-      flash[:notice]= "Article successfully created."
-      redirect_to @article
+      puts "TSTING"
+      flash[:success]= "Article successfully created."
     else
       flash[:error]="Check yo self fool." 
-      redirect_to :back
+      respond_to do |format|
+        format.js{}
+        format.html{}
+      end
     end
   end
 
@@ -23,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Artcile.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def update
@@ -38,9 +41,13 @@ class ArticlesController < ApplicationController
   end
   def destroy
     @article = Article.find(params[:id])
+    
       if @article.destroy
         flash[:notice] = "Article deleted."
-        redirect_to articles
+        respond_to do |format|
+        format.html{redirect_to articles_path}
+        format.js{@article = Article.all}
+        end
       else
         flash[:error] = "Try Again."
         redirect_to :back

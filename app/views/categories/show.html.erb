@@ -1,2 +1,7 @@
 <h1>Categories#show</h1>
 <p>Find me in app/views/categories/show.html.erb</p>
+<% @category.articles.limit(5).each do |article| %>
+<%= article.title %>
+
+<% end %>
+

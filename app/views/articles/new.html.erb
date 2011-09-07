@@ -1,12 +1,2 @@
-<% form_for(@article) do |f| %>
-<p><%= f.error_messages %></p>
-<p><%= f.label :title%></p>
-<%= f.text_field :title %>
-<p><%= f.label :slug%></p>
-<%= f.text_field :slug %>
-<p><%= f.label :content %></p>
-<%= f.text_field :content%>
-<p><%= f.label :category %></p>
-<%= f.collection_select :category_id, Category.all,:id,:name %>
-<p><%= f.submit %></p>
-<% end %>
+
+<%= render :partial => 'form' %>

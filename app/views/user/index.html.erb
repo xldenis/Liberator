@@ -1,0 +1,4 @@
+<% @users.each do |user| %>
+
+<p><%= user.name %> <%= link_to "Edit", user ,:method=> :destroy%> <%= link_to "Delete", edit_user_path %></p>
+<% end %>

@@ -1,0 +1,8 @@
+
+$(".row").prepend("<div class='alert-message success' style='display:none;'>Article Deleted</div>");
+$(".alert-message.success").fadeToggle(500,function(){
+setTimeout(function(){$('.alert-message.success').fadeToggle(500,function(){$('.alert-message.success').remove();});},2000);
+});
+
+$("tbody").html("<%= escape_javascript(render :partial => "list") %>");
+
