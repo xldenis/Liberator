@@ -1,6 +1,5 @@
 <div  class="container-fluid">
-<div class="sidebar"><ul id="list"><% @articles.each do |article|%><li><b><%= article.title%></b></li><% end %></ul></div>
-<% debugger %>
-<div class="content"><%= render "index",:locals => {:articles => @front_page_articles} %></div>
+<div class="sidebar"><ul id="list"><% @articles.each do |article|%><li id="<%=article.id%>"><b><%= article.title%></b></li><% end %></ul></div>
+<div class="content"><%= render :partial =>"index",:locals => {:articles => @front_page_articles} %></div>
 
 </div>

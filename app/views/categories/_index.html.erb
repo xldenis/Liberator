@@ -1,7 +1,6 @@
-<% debugger %>
 <% if !articles %>
 <% 3.times do |index|%>
-<div <% if index==0 %>class="article" id="head"<% else %>class="article secondary"<% end %>></div>
+<div <% if index==0 %>class="article" id="head"<% else %>class="article secondary"<% end %>><h1>Placeholder</h1></div>
 <% end %>
 <% else %>
 <% articles.each_with_index do |article,index| %>

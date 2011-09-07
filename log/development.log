@@ -8541,3 +8541,555 @@ ActionView::Template::Error (undefined local variable or method `articles' for #
 Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
 Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
 Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 20:49:00 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (66924.8ms)
+Rendered categories/edit.html.erb within layouts/application (70107.6ms)
+Completed 500 Internal Server Error in 70848ms
+
+ActionView::Template::Error (undefined local variable or method `articles' for #<#<Class:0x00000003bffb00>:0x00000003be0890>):
+    1: <% debugger %>
+    2: <% if !articles %>
+    3: <% 3.times do |index|%>
+    4: <div <% if index==0 %>class="article" id="head"<% else %>class="article secondary"<% end %>></div>
+    5: <% end %>
+  app/views/categories/_index.html.erb:2:in `_app_views_categories__index_html_erb___3068069826076014544_33605600'
+  app/views/categories/edit.html.erb:4:in `_app_views_categories_edit_html_erb__1741008263750526686_31389160'
+
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (46.0ms)
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.7ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+DEPRECATION WARNING: require_library_or_gem is deprecated and will be removed from Rails 3.2. (called from require at script/rails:6)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 20:52:04 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (24141.1ms)
+Rendered categories/edit.html.erb within layouts/application (35028.4ms)
+Completed 500 Internal Server Error in 35349ms
+
+ActionView::Template::Error (undefined local variable or method `articles' for #<#<Class:0x000000043c9d68>:0x000000042fb4e0>):
+    1: <% debugger %>
+    2: <% if !articles %>
+    3: <% 3.times do |index|%>
+    4: <div <% if index==0 %>class="article" id="head"<% else %>class="article secondary"<% end %>></div>
+    5: <% end %>
+  app/views/categories/_index.html.erb:2:in `_app_views_categories__index_html_erb___4012864672336053244_41186500'
+  app/views/categories/edit.html.erb:4:in `_app_views_categories_edit_html_erb___4157411598813374714_41168520'
+
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /home/xavier/.rvm/gems/ruby-1.9.2-p290@rails31/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:03:47 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (53.8ms)
+Rendered categories/edit.html.erb within layouts/application (98.3ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 1885ms (Views: 1324.4ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:03:55 -0500
+Served asset /categories.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:03:55 -0500
+Served asset /category.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:03:55 -0500
+Served asset /jquery.js - 304 Not Modified (488ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:03:56 -0500
+Served asset /application.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:03:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:03:56 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (57ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:03:56 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:03:56 -0500
+Served asset /category.js - 304 Not Modified (3ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:04:44 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (96.6ms)
+Rendered categories/edit.html.erb within layouts/application (130.1ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 1153ms (Views: 752.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /category.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:04:46 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:07:20 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (1.1ms)
+Rendered categories/edit.html.erb within layouts/application (41.6ms)
+Compiled category.js  (1063ms)  (pid 7805)
+Compiled application.js  (61ms)  (pid 7805)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 2102ms (Views: 1714.7ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:07:25 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:07:25 -0500
+Served asset /application.js - 200 OK (244ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /category.js - 200 OK (42ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:07:26 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:08:35 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (24.8ms)
+Compiled category.js  (113ms)  (pid 7805)
+Compiled application.js  (149ms)  (pid 7805)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 1300ms (Views: 1204.0ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:08:37 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (3.5ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 232ms (Views: 146.2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:08:38 -0500
+Served asset /application.js - 200 OK (1874ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:08:40 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:08:40 -0500
+Served asset /category.js - 200 OK (323ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (24.7ms)
+Compiled category.js  (141ms)  (pid 7805)
+Compiled application.js  (7ms)  (pid 7805)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 492ms (Views: 394.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:13 -0500
+Served asset /category.js - 200 OK (4ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:09:33 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (4.6ms)
+Compiled category.js  (7ms)  (pid 7805)
+Compiled application.js  (10ms)  (pid 7805)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 293ms (Views: 197.8ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:09:33 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (3.7ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 325ms (Views: 146.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /category.js - 200 OK (113ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:09:34 -0500
+Served asset /application.js - 200 OK (199ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:10:03 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (5.5ms)
+Compiled category.js  (3ms)  (pid 7805)
+Compiled application.js  (8ms)  (pid 7805)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 271ms (Views: 184.5ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:04 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:04 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:04 -0500
+Served asset /category.js - 200 OK (1738ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:05 -0500
+Served asset /application.js - 200 OK (936ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:06 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:10:43 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (4.6ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 263ms (Views: 171.3ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /category.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:44 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:10:50 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (4.4ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 193ms (Views: 152.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /category.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:10:51 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/categories/4e61184edc8055320a000001/edit" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+  Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"4e61184edc8055320a000001"}
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({:_id=>BSON::ObjectId('4e61184edc8055320a000001')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e61184edc8055320a000001')})
+Rendered categories/_index.html.erb (0.1ms)
+Rendered categories/edit.html.erb within layouts/application (17.0ms)
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e6116f2dc80552c76000006')})
+Completed 200 OK in 257ms (Views: 171.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-06 21:14:20 -0500
+Served asset /category.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-06 21:14:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-06 21:14:21 -0500
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-06 21:14:21 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
