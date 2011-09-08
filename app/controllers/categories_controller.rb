@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
   @categories = Category.all
-  @articles = Article.find(@categories.first.front_page_articles)
+  @articles = Article.find(@categories.first.front_page_articles) if @categories.first.front_page_articles
   end
 
   def show
@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
   @category = Category.find(params[:id])
   if @category.update_attributes(params[:category]) && @category.save
     flash[:notice] = "Category successfully updated."
+    
     redirect_to @category
   end
   end
