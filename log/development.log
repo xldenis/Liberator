@@ -16739,3 +16739,104 @@ Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-11 21:35:43 -0500
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2011-09-11 22:00:51 -0500
+  Processing by ArticlesController#index as HTML
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({:_id=>BSON::ObjectId('4e68c941dc80556791000005')})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({})
+Rendered articles/_list.html.erb (68.7ms)
+Rendered articles/index.html.erb within layouts/application (130.2ms)
+Completed 200 OK in 1214ms (Views: 569.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /category.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /category.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-11 22:01:20 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 304 Not Modified (0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 08:31:38 -0500
+  Processing by CategoriesController#index as HTML
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({})
+Rendered categories/_index.html.erb (0.9ms)
+Rendered categories/index.html.erb within layouts/application (192.4ms)
+Completed 200 OK in 1511ms (Views: 1288.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /application.css - 200 OK (36ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /categories.css - 200 OK (36ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /category.css - 200 OK (28ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /jquery_ujs.js - 200 OK (62ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /jquery.js - 200 OK (41ms)
+
+
+Started GET "/assets/jquery-ui-1.8.16.custom.min.js?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /jquery-ui-1.8.16.custom.min.js - 200 OK (19ms)
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /category.js - 200 OK (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-12 08:31:40 -0500
+Served asset /application.js - 200 OK (85ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-12 08:57:06 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 451ms (Views: 113.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-12 08:57:08 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 169ms (Views: 18.3ms)

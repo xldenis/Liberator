@@ -6,7 +6,6 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new
     if @article.update_attributes(params[:article]) && @article.save
-      puts "TSTING"
       flash[:success]= "Article successfully created."
     else
       flash[:error]="Check yo self fool." 
