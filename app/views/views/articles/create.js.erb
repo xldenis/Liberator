@@ -1,4 +1,0 @@
-$("#flash_notice").hide(300);
-$("#flash_error").hide(300);
-$("#post_errors").html("<div class=\"alert-message block-message error\"><ul><% @article.errors.full_messages.each do |msg|%><li><%= escape_javascript(msg) %></li><% end %></ul></div>");
-$("#post_errors").show(300);
