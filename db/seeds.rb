@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.fir
+cat = Category.create(:name =>  "News", :front_page_articles => nil)
+15.times do |index|
+  cat.articles.create(:title => "Article #{index}",:slug => "Slug #{index}",:content => "test")
+end

@@ -16840,3 +16840,26 @@ Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-12 08:57:08 -0500
 Rendered devise/shared/_links.erb (3.4ms)
 Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
 Completed 200 OK in 169ms (Views: 18.3ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['users'].find({})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['categories'].find({})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB liberator_development['categories'].insert([{"name"=>"News", "front_page_articles"=>nil, "_id"=>BSON::ObjectId('4e6e4ea3dc80550a09000001')}])
+MONGODB liberator_development['categories'].find({}).sort([[:_id, :desc]])
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB liberator_development['system.namespaces'].find({})
+MONGODB liberator_development['articles'].find({"category_id"=>BSON::ObjectId('4e6e6dafdc80550e51000001')})
