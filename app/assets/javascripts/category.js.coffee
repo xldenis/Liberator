@@ -5,8 +5,10 @@ $ ->
   serialize =->
     for elem in article
       do (elem) ->
-        $(elem).contents().attr('id')
-
+        if $(elem).data('id') 
+          $(elem).data('id')
+        else
+          "nil"
      
   list.draggable 
     cancel: "a.ui-icon",
@@ -16,9 +18,8 @@ $ ->
   article.droppable accept: "#list >li", 
     drop: (event, ui) -> 
       $(@).html ui.draggable
-      
-  submit.live 'ajax:beforeSend',(xhr) ->
-    xhr.data.append serialize()
-    true
+      $(@).data 'id',ui.draggable.data 'id' 
+  submit.live 'ajax:before',->
+    $(this).data('params',{front_page_articles: serialize()})
   true
   

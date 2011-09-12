@@ -1,5 +1,5 @@
 <div  class="container-fluid">
-<div class="sidebar"><ul id="list"><li><%= link_to "Submit",category_path,:id => "submit",:remote=>true,:method => "put"%></li><% @articles.each do |article|%><li id="<%=article.id%>"><b><%= article.title%></b></li><% end %></ul></div>
+<div class="sidebar"><ul id="list"><li><%= link_to "Submit",category_path,:id => "submit",:remote=>true,:method => "put"%></li><% @articles.each do |article|%><li data-id="<%=article.id%>"><b><%= article.title%></b></li><% end %></ul></div>
 <div class="content"><%= render :partial =>"index",:locals => {:articles => @front_page_articles} %></div>
 
 </div>
