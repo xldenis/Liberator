@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 gem 'bson_ext'
 gem 'mongodb'
 gem 'mongoid'
-
+gem 'heroku'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -15,8 +15,8 @@ group :assets do
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
 end
-group :development do
-
+group :production do
+gem 'thin'
 end
 gem 'nifty-generators'
 gem 'cancan'
