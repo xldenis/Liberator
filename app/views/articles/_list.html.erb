@@ -1,9 +1,10 @@
 <% @article.each do |article| %>
 
 <tr>
-  <td><%= article.title %></td>
+  <td><%= link_to article.title,article %></td>
   <td><%= article.slug %></td>
-  <td><% if can? :update, article%><%=link_to "Edit Article",edit_article_path(article)%></td>
+
+  <td><% if can? :update, article%><%=link_to "Edit",edit_article_path(article)%></td>
 <% end %>
   <td><% if can? :delete, article %><%= link_to "Delete",article,:method => :delete,:remote => true%><% end %></td>        
 </tr>
