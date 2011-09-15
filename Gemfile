@@ -7,7 +7,6 @@ gem 'rails', '3.1.0'
 gem 'bson_ext'
 gem 'mongodb'
 gem 'mongoid'
-gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
