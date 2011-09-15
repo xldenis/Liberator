@@ -8,7 +8,7 @@ Liberator::Application.routes.draw do
     get '/logout' => 'devise/sessions#destroy'
    end
    resources :token_authentications, :only => [:create, :destroy]
-   resources :user, :controller => "user"
+   resources :users, :controller => "user"
    resources :articles
    resources :categories
    root :to => "categories#index"

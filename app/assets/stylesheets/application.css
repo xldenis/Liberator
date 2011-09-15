@@ -6,19 +6,38 @@
  *= require_tree . 
 */
 body {
-  background-color: #4B7399;
+  background-color: #fff;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
+  padding-top:40px;
 }
 
 a img {
   border: none;
 }
-
 a {
   color: #0000FF;
 }
-
+div.topbar-wrapper {
+  position: relative;
+  height: 40px;
+  margin: 5px 0 15px;
+}    
+div.topbar-wrapper div.topbar {
+  position: absolute;
+  margin: 0 -20px;
+}
+div.topbar-wrapper div.topbar .topbar-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.box{
+display:inline-block;
+padding-left:10px;
+}
 .clear {
   clear: both;
   height: 0;
@@ -28,9 +47,7 @@ a {
 #container {
   width: 75%;
   margin: 0 auto;
-  background-color: #FFF;
   padding: 20px 40px;
-  border: solid 1px black;
   margin-top: 20px;
 }
 
@@ -38,7 +55,6 @@ a {
   padding: 5px 8px;
   margin: 10px 0;
 }
-
 #flash_notice {
   background-color: #CFC;
   border: solid 1px #6C6;
