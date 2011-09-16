@@ -6,7 +6,6 @@ class CategoriesController < ApplicationController
   @categories.first.front_page_articles.each do |article|
     if !(article=="nil") then @articles<<Article.find(article) else @articles<<nil end
   end
-  print @articles.count
   else
   @articles = nil
   end
