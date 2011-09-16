@@ -5,9 +5,13 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.fir
+
+Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 cat = Category.create(:name =>  "News", :front_page_articles => nil)
 15.times do |index|
-  cat.articles.create(:title => "Article #{index}",:slug => "Slug #{index}",:content => "test")
+  cat.articles.create(:title => "Article #{index}",:slug => "Slug #{index}",:content => Lorem::Base.new('paragraphs',4).output)
 end
-User.create(:email => "reporter@liberator.com", :encrypted_password=> "$2a$10$oUDLvCUVDVS2EuJFem//yOF.RJxnRgE4uFaVJvj35MD3hvIBV7RUK", :name => "Reporter User", :role => "reporter")
-User.create(:email => "admin@liberator.com", :encrypted_password=> "$2a$10$njr3d3a.NxH8YiE0HJRbG.lDNJ7lvkYS3X2ptS.6y19gDbaff14aK",:name => "Admin User", :role => "admin")
+user =User.create! :email=> "reporter@liberator.com", :password=> "reporter",:password_confirmation => "reporter", :name => "Reporter User"
+puts 'New user created: ' <<user.name
+user = User.create! :email=> "admin@liberator.com", :password => "administrator",:password_confirmation => "administrator", :name => "Admin User", :role => "admin"
+puts 'New user created: ' << user.name

@@ -17,11 +17,14 @@ group :assets do
 end
 group :production do
 gem 'thin'
+group :development,:test do
+gem 'lorem'
+gem 'therubyracer'
+end
 end
 gem 'nifty-generators'
 gem 'cancan'
 gem 'devise'
-gem 'therubyracer'
 gem 'jquery-rails'
 
 # Use unicorn as the web server

@@ -1,9 +1,19 @@
 class CategoriesController < ApplicationController
+  def home
+  @categories = Category.all
+  @articles=[]
+  if @categories.first.front_page_articles
+  @categories.first.front_page_articles.each do |article|
+    if !(article=="nil") then @articles<<Article.find(article) else @articles<<nil end
+  end
+  print @articles.count
+  else
+  @articles = nil
+  end
+  end
   def index
   @categories = Category.all
-  @articles = Article.find(@categories.first.front_page_articles) if @categories.first.front_page_articles
   end
-
   def show
   @category = Category.find(params[:id])
   end
@@ -13,9 +23,8 @@ class CategoriesController < ApplicationController
   if @category.front_page_articles
   
   @front_page_articles = []
-  @category.front_page_articles.each do |article|
-  
-  if !(article=="nil") then @front_page_articles<<Article.find(article) else @front_page_articles<<nil end
+  @category.front_page_articles.each do |article| 
+  if !(article=="nil")&&article then @front_page_articles<<Article.find(article) else @front_page_articles<<nil end
   end
   else 
 

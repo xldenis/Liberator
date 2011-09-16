@@ -22,7 +22,7 @@
         
           <% if user_signed_in? %>
           <ul class="nav">
-          <li><%= link_to "Categories",categories_path %></li>
+          <li><%= link_to "Categories",categories_path %> </li>
           <% if can? :read, Article %>
           <li class="dropdown"><%= link_to "Articles","#",:class=>"dropdown-toggle" %>
           <ul class="dropdown-menu">
