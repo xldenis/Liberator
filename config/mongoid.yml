@@ -1,7 +1,5 @@
 development:
-  host: localhost
-  database: liberator_development
-
+  uri: <%= ENV['MONGOLAB_URI'] %>
 test:
   host: localhost
   database: liberator_test
