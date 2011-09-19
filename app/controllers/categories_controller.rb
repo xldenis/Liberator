@@ -1,9 +1,9 @@
 class CategoriesController < ApplicationController
   def home
-  @categories = Category.all
+  @category = Category.first
   @articles=[]
-  if @categories.first.front_page_articles
-  @categories.first.front_page_articles.each do |article|
+  if @category.front_page_articles
+  @category.front_page_articles.each do |article|
     if !(article=="nil") then @articles<<Article.find(article) else @articles<<nil end
   end
   else
@@ -15,6 +15,17 @@ class CategoriesController < ApplicationController
   end
   def show
   @category = Category.find(params[:id])
+   if @category.front_page_articles
+
+     @front_page_articles = []
+       @category.front_page_articles.each do |article|
+         if !(article=="nil")&&article then @front_page_articles<<Article.find(article) else @front_page_articles<<nil end
+           end
+             else
+
+               @front_page_articles = nil
+                 end
+
   end
   def edit 
   @category = Category.find(params[:id])
@@ -34,11 +45,19 @@ class CategoriesController < ApplicationController
   @category = Category.find(params[:id])
   if (@category.front_page_articles=params[:front_page_articles]) && @category.save
     flash[:success] = "Category successfully updated."
-    
+    @front_page_articles = []
+    @category.front_page_articles.each do |article|
+    if !(article=="nil")&&article then @front_page_articles<<Article.find(article) else @front_page_articles<<nil end
+    end
+
     respond_to do |format| 
       format.html{redirect_to @category}
-      format.js{render :nothing => true}
+      format.js{}
+  
+
     end
+  else
+    flash[:error]="Something bad happened."
   end
   end
 end
