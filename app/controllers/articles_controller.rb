@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
       respond_to do |format|
         format.html{redirect_to @article}
         format.js{}
+      end
     else
       flash[:error] = "Something is wrong."
       redirect_to :edit
