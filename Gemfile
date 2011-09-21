@@ -26,7 +26,6 @@ gem 'nifty-generators'
 gem 'cancan'
 gem 'devise'
 gem 'jquery-rails'
-gem 'coffeebeans'
 # Use unicorn as the web server
 # gem 'unicorn'
 
