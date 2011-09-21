@@ -30,9 +30,11 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article = Article.update_attributes(params[:article])
+    if @article.update_attributes(params[:article])
       flash[:notice] = "Article Successfully Updated."
-      redirect_to @article
+      respond_to do |format|
+        format.html{redirect_to @article}
+        format.js{}
     else
       flash[:error] = "Something is wrong."
       redirect_to :edit
