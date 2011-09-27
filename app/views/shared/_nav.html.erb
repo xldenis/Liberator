@@ -10,7 +10,6 @@
           </ul>
           <% if user_signed_in? %>
           <ul class="nav secondary-nav">
-          <li><h3><%= current_user.role.capitalize %> Menu </h3></li>
           <li><%= link_to "Categories",categories_path %> </li>
           <% if can? :read, Article %>
           <li class="dropdown"><%= link_to "Articles","#",:class=>"dropdown-toggle" %>

@@ -7,7 +7,7 @@ def front_to_articles
   articles=[]
     if self.front_page_articles
       self.front_page_articles.each do |article|
-    if !(article=="nil") then articles<<Article.find(article) else articles<<nil end
+    if !(article=="nil")&&article then articles<<Article.find(article) else articles<<nil end
   end
   else
     articles = nil

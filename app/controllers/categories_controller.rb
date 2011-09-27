@@ -12,7 +12,11 @@ class CategoriesController < ApplicationController
   end
   def edit 
   @category = Category.find(params[:id])
-  @articles = @category.articles.to_a-@category.front_to_articles
+  if @category.front_page_articles
+  @articles = @category.articles.to_a - @category.front_page_articles
+  else
+  @articles = @category.articles.to_a
+  end
   @front_page_articles = @category.front_to_articles
   end
   def update 
