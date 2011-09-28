@@ -1,7 +1,11 @@
 class CategoriesController < ApplicationController
   def home
+  
   @category = Category.first
   @articles = @category.front_to_articles
+  if can? :manage, Category
+  redirect_to edit_category_path(@category)
+  end
   end
   def index
   @categories = Category.all
