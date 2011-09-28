@@ -10,6 +10,7 @@
     <%= yield(:head) %>
   </head>
   <body>
+    <%= render :partial => "shared/profile" %>
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "alert-message #{name}" %>

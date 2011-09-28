@@ -9,6 +9,6 @@ class User
   has_many :articles
   field :name
   field :role
-
+  attr_accessible :email, :password,:password_confirmation,:name
   ROLES = %w[admin reporter]
 end
