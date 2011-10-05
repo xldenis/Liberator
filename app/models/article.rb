@@ -1,5 +1,6 @@
 class Article
   include Mongoid::Document
+  belongs_to :user
   has_and_belongs_to_many :categories 
   validates_presence_of :title,:slug,:content
   field :title
@@ -12,8 +13,6 @@ class Article
   before_save :add_to_everything
  private 
   def add_to_everything
-  puts "testing"
-  puts self.inspect
   if self.persisted? && !(self.categories.where(:name=>"Everything").exists?)
   self.categories<<Category.where(:name => "Everything").first
   

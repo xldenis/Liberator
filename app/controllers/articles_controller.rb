@@ -5,8 +5,11 @@ class ArticlesController < ApplicationController
   end
   def create
     @article = current_user.articles.new
-    if @article.update_attributes(params[:article]) && @article.save
-      flash[:success]= "Article successfully created."
+   temp_params = params[:article].reject {|key,value| key == "category_ids"}
+
+    if @article.update_attributes(temp_params) && @article.save
+      @article.categories=[Category.find(params[:article][:category_ids])]
+     flash[:success]= "Article successfully created."
     else
       flash[:error]="Check yo self fool." 
       respond_to do |format|
