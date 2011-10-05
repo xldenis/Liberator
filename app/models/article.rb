@@ -8,10 +8,12 @@ class Article
   field :published, :type => Boolean
   field :published_on, :type => Date
   before_destroy :remove_frontpage
-  after_create :add_to_everything
-  before_save
+  after_create :init_to_everything
+  before_save :add_to_everything
  private 
   def add_to_everything
+  puts "testing"
+  puts self.inspect
   if self.persisted? && !(self.categories.where(:name=>"Everything").exists?)
   self.categories<<Category.where(:name => "Everything").first
   

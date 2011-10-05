@@ -30,7 +30,9 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update_attributes!(params[:article])
+    temp_params = params[:article].reject {|key,value| key == "category_ids"}
+    @article.categories=[Category.find(params[:article][:category_ids])]
+   if @article.update_attributes!(temp_params)
       flash[:notice] = "Article Successfully Updated."
       respond_to do |format|
         format.html{redirect_to @article}
