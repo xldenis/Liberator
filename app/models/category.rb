@@ -1,6 +1,6 @@
 class Category
   include Mongoid::Document
-  has_many :articles
+  has_and_belongs_to_many :articles
   field :name
   field :front_page_articles, :type=> Array
 def front_to_articles

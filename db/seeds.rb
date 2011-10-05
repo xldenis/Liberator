@@ -7,11 +7,20 @@
 #   Mayor.create(:name => 'Daley', :city => cities.fir
 
 Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
+Category.create(:name => "Everything",:front_page_articles => nil)
+Category.create(:name => "Sports")
 cat = Category.create(:name =>  "News", :front_page_articles => nil)
+
 15.times do |index|
   cat.articles.create(:title => "Article #{index}",:slug => "Slug #{index}",:content => Lorem::Base.new('paragraphs',4).output)
 end
+puts 'Articles Created.'
+puts 'Everything has #{Category.first.articles.count} articles in it.'
 user =User.create! :email=> "reporter@liberator.com", :password=> "reporter",:password_confirmation => "reporter", :name => "Reporter User"
+user.role = "reporter"
+user.save
 puts 'New user created: ' <<user.name
 user = User.create! :email=> "admin@liberator.com", :password => "administrator",:password_confirmation => "administrator", :name => "Admin User", :role => "admin"
+user.role = "admin"
+user.save
 puts 'New user created: ' << user.name

@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
   end
   def index
-  @categories = Category.all
+  @categories = Category.excludes(Category.first.id)
   end
   def show
   @category = Category.find(params[:id])

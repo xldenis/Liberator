@@ -7,7 +7,7 @@
 <p><%= f.label :content %></p>
 <%= f.text_area :content%>
 <p><%= f.label :category %></p>
-<%= f.collection_select :category_id, Category.all,:id,:name %>
+<%= f.collection_select  :category_ids, Category.excludes(:id => Category.first.id),:id,:name,{} %>
 <p><%= f.submit %></p>
 <% end %>
 

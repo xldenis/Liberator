@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update_attributes(params[:article])
+    if @article.update_attributes!(params[:article])
       flash[:notice] = "Article Successfully Updated."
       respond_to do |format|
         format.html{redirect_to @article}

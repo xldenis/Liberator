@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div id="status"><%= current_user.role.upcase%></div>
   <div id="profile">
-  <% if can? :read, Article %>
+  <% if can? :create, Article %>
   <%= link_to image_tag("newarticle.png"),new_article_path %>
   <%= link_to image_tag("listarticle.png"),articles_path %>
   <% end %>
@@ -12,7 +12,8 @@
       <%= link_to image_tag("account.png"), edit_user_registration_path %>
       <%= link_to image_tag("logout.png"), destroy_user_session_path %>
   <% else %>
-    <%= link_to image_tag("login.png"), new_user_session_path %>
+   <div id="profile">
+   <%= link_to image_tag("login.png"), new_user_session_path %>
   <% end %>
   </div>
 
