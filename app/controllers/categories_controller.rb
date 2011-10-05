@@ -17,8 +17,9 @@ class CategoriesController < ApplicationController
   def edit 
   @category = Category.find(params[:id])
   if @category.front_page_articles
-  @articles = @category.articles.to_a - @category.front_page_articles
+  @articles = @category.articles.to_a - @category.front_to_articles
   else
+
   @articles = @category.articles.to_a
   end
   @front_page_articles = @category.front_to_articles
