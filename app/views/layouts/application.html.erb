@@ -11,6 +11,7 @@
   </head>
   <body>
     <%= render :partial => "shared/profile" %>
+    <%= yield(:edit_menu)%>
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "alert-message #{name}" %>
