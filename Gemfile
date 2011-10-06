@@ -16,12 +16,12 @@ group :assets do
   gem 'uglifier'
 end
 group :production do
-gem 'thin'
+  gem 'thin'
 end
-group :development,:test do
 gem 'lorem'
-gem 'therubyracer'
-gem 'ruby-debug19'
+group :development,:test do
+  gem 'therubyracer'
+  gem 'ruby-debug19'
 end
 gem 'nifty-generators'
 gem 'cancan'
