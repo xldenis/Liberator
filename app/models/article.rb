@@ -11,7 +11,7 @@ class Article
   before_destroy :remove_frontpage
   after_create :init_to_everything
   before_save :add_to_everything
- private 
+private 
   def add_to_everything
   if self.persisted? && !(self.categories.where(:name=>"Everything").exists?)
   self.categories<<Category.where(:name => "Everything").first
@@ -31,5 +31,5 @@ class Article
       self.category.save
   end
   end
-
+    
 end
