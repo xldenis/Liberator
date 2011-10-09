@@ -6,7 +6,7 @@
   <%= link_to image_tag("list.svg"),articles_path %>
   <% end %>
   <% if can? :manage, @users %>
-    <%= link_to image_tag("users.png"), users_path %>
+    <%= link_to image_tag("cog.svg"), users_path %>
   <% end %>
           
       <%= link_to image_tag("user.svg"), edit_user_registration_path %>
