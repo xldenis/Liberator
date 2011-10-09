@@ -5,6 +5,14 @@ background-color:#333;
 width:800px;
 height:150px;
 }
+#list{
+width:750px;
+display:none;
+height:0px;
+}
+#list.open{
+display:block ;
+}
 .list_item{
 width: 150px;
 height: 35px;

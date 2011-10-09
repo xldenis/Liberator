@@ -16,22 +16,27 @@ class CategoriesController < ApplicationController
   end
   def edit 
   @category = Category.find(params[:id])
+    @front_page_articles = @category.front_to_articles
   if @category.front_page_articles
   @articles = @category.articles.to_a - @category.front_to_articles
   else
-
   @articles = @category.articles.to_a
   end
-  @front_page_articles = @category.front_to_articles
+
   end
   def update 
   @category = Category.find(params[:id])
   if (@category.front_page_articles=params[:front_page_articles]) && @category.save
     flash[:success] = "Category successfully updated."
+    if @category.front_page_articles
+      @articles = @category.articles.to_a - @category.front_to_articles
+    else
+      @articles = @category.articles.to_a
+    end
     @front_page_articles = @category.front_to_articles
     respond_to do |format| 
       format.html{redirect_to @category}
-      format.js{}
+      format.js{render :layout=> false}
     end
   else
     flash[:error]="Something bad happened."

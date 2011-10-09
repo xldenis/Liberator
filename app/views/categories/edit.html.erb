@@ -2,11 +2,8 @@
 <div id="edit_menu">
 <div id="list">
 <div class="list_item"><%= link_to "Submit",category_path,:id => "submit",:remote=>true,:method => "put"%></div>
-<% @articles.each do |article|%>
+<%=render :partial => "article_list" %>
 
-<div class="list_item" data-id="<%=article.id%>"><b><%= article.title%></b></div>
-
-<% end %>
 </div>
 </div>
 <% end %>
