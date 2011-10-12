@@ -1,11 +1,14 @@
-<% content_for :edit_menu do %>
-<div id="edit_menu">
-<div id="list">
-<div class="list_item"><%= link_to "Submit",category_path,:id => "submit",:remote=>true,:method => "put"%></div>
-<%=render :partial => "article_list" %>
+<% content_for :layout_menu do %>
 
+<div id="layout-menu">
+	<ul id="article-list">
+		<%=render :partial => "article_list" %>
+	</ul>
+	<%= link_to "Save Layout",category_path,:id => "submit-button",:remote=>true,:method => "put"%>
 </div>
-</div>
+
 <% end %>
-<div class="content"><%= render :partial =>"index",:locals => {:articles => @front_page_articles} %></div>
 
+<div class="content">
+	<%= render :partial =>"index",:locals => {:articles => @front_page_articles} %>
+</div>
