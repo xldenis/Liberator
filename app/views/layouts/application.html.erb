@@ -16,14 +16,19 @@
     <%= yield(:edit_menu)%>
     
     <div id="container">
+     
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "alert-message #{name}" %>
+        <%= content_tag :div, msg, :class => "alert #{name}" %>
       <% end %>
+
       <%= render :partial => "shared/nav" %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
+
     </div>
 
+    <footer> Copyright 2011 LASA Liberator. </footer>
+
   </body>
-  
+
 </html>

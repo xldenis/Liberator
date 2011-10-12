@@ -40,6 +40,7 @@ $ ->
     $('#list').append data_list
     enabledraggable()
     article.droppable "destroy"
+    alert html
     content.html html
     enabledroppable()
     true

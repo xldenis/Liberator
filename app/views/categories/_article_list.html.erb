@@ -1,5 +1,7 @@
 <% @articles.each do |article|%>
 
-<div class="list_item" data-id="<%=article.id%>"><b><%= article.title%></b></div>
+	<div class="list_item" data-id="<%=article.id%>">
+		<%= article.title%>
+	</div>
 
 <% end %>
