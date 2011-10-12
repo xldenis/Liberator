@@ -2,9 +2,9 @@
 
 <% if user_signed_in? %>
  
-  <div id="status"> <%= current_user.role.upcase%> </div>
+  <div class="status"> <%= current_user.role.upcase%> </div>
   
-  <div id="profile">
+  <div class="profile">
     <% if can? :create, Article %>
       <%= link_to image_tag("pen_alt_stroke.svg"),new_article_path %>
       <%= link_to image_tag("list.svg"),articles_path %>
@@ -21,7 +21,7 @@
 
 <% else %>
   
-  <div id="profile">
+  <div class="profile">
     <%= link_to image_tag("login.png"), new_user_session_path %>
     <% end %>
   </div>
