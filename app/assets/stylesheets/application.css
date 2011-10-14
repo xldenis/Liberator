@@ -1,9 +1,9 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree .
+This is a manifest file that'll automatically include all the stylesheets available in this directory and any sub-directories. You're free to add application-wide styles to this file and they'll appear at the top of the compiled file, but it's generally better to create a new file per style scope.
+
+  = require_self
+  = require_tree .
+
 */
 
 
@@ -22,11 +22,13 @@ a {}
 a:hover {}
 
 
+
 /* Container, userbar, navbar */
 
 #container {
   margin: 0 auto;
   width: 960px;
+  overflow: auto;
 
   background: red;
 }
@@ -43,14 +45,71 @@ a:hover {}
   float: right;
 }
 
-nav {
-  padding: 5px 0 5px 0;
-  background: blue;
+nav ul {
+  display: block;
+  padding: 0;
+  background: black;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+nav li home {
+  padding: ;
+}
+
+nav li a {
+  display: block;
+  padding: 20px;
+}
+
+
+
+/* Frontpage layout */
+
+.article {
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.featured {
+  display: block;
+  width: 920px;
 }
 
 
 
 
+
+
+#layout-menu {
+  display: block;
+  width: 960px;
+  margin: auto;
+  padding: 10px;
+  background: yellow;
+}
+
+#layout-menu li {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  background: white;
+}
+
+#list.open{
+  display: block ;
+}
 
 
 
