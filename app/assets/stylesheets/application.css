@@ -7,13 +7,13 @@ This is a manifest file that'll automatically include all the stylesheets availa
 */
 
 
-/* HTML, body, link, paragraph, etc. styling */
 
-html { background-color: #eee; padding: 20px auto 20px auto; }
+/* HTML, body, link, paragraph, and other basics */
+
+html { background-color: #fff; padding: 20 auto;}
 
 body {
-  background-color: #eee;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 16px;
 }
 
@@ -29,42 +29,100 @@ a:hover {}
   margin: 0 auto;
   width: 960px;
   overflow: auto;
-
-  background: red;
 }
 
 #userbar {
   margin: 20px auto 20px auto;
-  padding: 20px;
-  width: 960px;
-
-  background: purple;
+  padding: 20px 0 20px 0;
+  width: 940px;
 }
 
-.profile {
-  float: right;
+.status, .profile { font-style: italic; }
+
+.profile { float: right; }
+
+.profile a {
+  padding: 10px;
+  margin: 0 -20px 0 30px;
 }
 
 nav ul {
   display: block;
+  width: 960px;
+  margin: auto;
   padding: 0;
-  background: black;
+  overflow: auto;
 }
 
 nav li {
   display: inline-block;
-  margin: 0;
+  float: left;
+  margin: 10px;
   padding: 0;
-  background: white;
+  text-transform: uppercase;
+  background: #eee;
 }
 
-nav li home {
-  padding: ;
+nav li.home {
+  font-weight: bold;
+  width: 220px;
+  text-transform: none !important;
 }
 
 nav li a {
   display: block;
   padding: 20px;
+}
+
+div#alert-message {display: none !important;}
+
+
+
+/* Editor's layout-edit menu */
+
+.open {
+  display: block !important;
+  background-color:black;
+}
+
+#layout-menu {
+  display: block;
+  width: 960px;
+  max-height: 250px;
+  margin: 20px auto 20px auto;
+  padding: 0;
+  overflow: auto;
+
+  background: #ccc;
+}
+
+#list {
+  margin: 0;
+  padding: 0;
+  max-height: 212px;
+  overflow: auto;
+}
+
+#list li {
+  display: inline-block;
+  float: left;
+  width: 208px;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+  background: white;
+  cursor: move;
+}
+
+#submit {
+  display: block;
+  width: 208px;
+  float: right;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #000;
 }
 
 
@@ -78,98 +136,12 @@ nav li a {
   height: 200px;
   margin: 10px;
   padding: 10px;
-  background: #fff;
+  background: #f9f9f9;
+  border: dotted black;
+  border-width: 1px 0 1px 0;
 }
 
 .featured {
   display: block;
   width: 920px;
 }
-
-
-
-
-
-
-#layout-menu {
-  display: block;
-  width: 960px;
-  margin: auto;
-  padding: 10px;
-  background: yellow;
-}
-
-#layout-menu li {
-  display: inline-block;
-  width: 200px;
-  padding: 10px;
-  margin: 10px;
-  background: white;
-}
-
-#list.open{
-  display: block ;
-}
-
-
-
-
-/*.box{
-display:inline-block;
-padding-left:10px;
-}
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-
-#flash_notice, #flash_error, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
-}
-#flash_notice {
-  background-color: #CFC;
-  border: solid 1px #6C6;
-}
-
-#flash_error, #flash_alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
-}
-
-.fieldWithErrors {
-  display: inline;
-}
-
-.error_messages {
-  width: 400px;
-  border: 2px solid #CF0000;
-  padding: 0px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  font-size: 12px;
-}
-
-.error_messages h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin: 0;
-  background-color: #c00;
-  color: #fff;
-}
-
-.error_messages p {
-  margin: 8px 10px;
-}
-
-.error_messages ul {
-  margin: 0;
-}
-
-.admin {
-  float: right;
-}*/

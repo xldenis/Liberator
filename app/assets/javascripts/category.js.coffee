@@ -6,7 +6,7 @@ $ ->
   status = $('#status')
 
   status.live 'click',->
-    $('#list').toggleClass 'open'
+    $('#BROKEN').toggleClass 'open'
 
   serialize =->
     for elem in article
