@@ -12,7 +12,7 @@ class Ability
       can :read, Article
       can :read, Category
     else
-      can :read, Article,:published => true
+      can :read, Article
       cannot :index, Article
       can :read, Category
     end
