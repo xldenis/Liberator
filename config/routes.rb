@@ -9,7 +9,10 @@ Liberator::Application.routes.draw do
    end
    resources :token_authentications, :only => [:create, :destroy]
    resources :users, :controller => "user"
-   resources :articles
+   match 'articles/crop_update/:id' => 'articles#crop_update'
+   resources :articles do
+    get 'crop', :on => :member
+  end
    resources :categories
    root :to => "categories#home"
   # Sample of regular route:

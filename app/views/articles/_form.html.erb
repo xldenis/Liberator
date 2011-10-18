@@ -8,6 +8,12 @@
 <%= f.text_area :content%>
 <p><%= f.label :category %></p>
 <%= f.collection_select  :category_ids, Category.excludes(:id => Category.first.id),:id,:name,{} %>
+<p>
+<%= f.file_field :image %>
+</p>
+<p>
+<%= f.label :remote_image_url, "or image URL" %>
+<%= f.text_field :remote_image_url %>
 <p><%= f.submit %></p>
 <% end %>
 

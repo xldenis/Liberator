@@ -9,6 +9,8 @@ gem 'mongodb'
 gem 'mongoid'
 gem 'heroku'
 gem 'redcarpet'
+gem 'carrierwave-mongoid', :require=>'carrierwave/mongoid'
+gem 'mini_magick'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

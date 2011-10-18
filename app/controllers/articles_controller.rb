@@ -6,10 +6,13 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new
    temp_params = params[:article].reject {|key,value| key == "category_ids"}
-
     if @article.update_attributes(temp_params) && @article.save
       @article.categories=[Category.find(params[:article][:category_ids])]
+      @article.save
      flash[:success]= "Article successfully created."
+      respond_to do |format|
+       format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
+      end
     else
       flash[:error]="Check yo self fool." 
       respond_to do |format|
@@ -59,5 +62,21 @@ class ArticlesController < ApplicationController
         flash[:error] = "Try Again."
         redirect_to :back
       end
+  end
+  def crop
+  @article = Article.find(params[:id])
+  if !@article.image
+    flash[:notice] = "Try uploading an image first.."
+    redirect_to article_edit_path(@article)
+  end
+  end
+  def crop_update
+    @article = Article.find(params[:id])
+    @article.crop_x = params[:article]["crop_x"]
+    @article.crop_y = params[:article]["crop_y"]
+    @article.crop_h = params[:article]["crop_h"]
+    @article.crop_w = params[:article]["crop_w"]
+    @article.save
+    redirect_to @article
   end
 end
