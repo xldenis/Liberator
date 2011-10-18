@@ -1,21 +1,18 @@
-        <div class="topbar-wrapper">
-        <div class="topbar">
-        <div class="topbar-inner">
-        <div class="container">
-        <h3><%= link_to "Liberator", :root  %></h3>
-          <ul class ="nav">  
-          <% if can? :manage,Category%>
-          <% Category.excludes(:id=>Category.first.id).each do |cat| %>
-          <li><%= link_to cat.name,edit_category_path(cat)%></li>
-          <% end %>
-          <% else %>
-          <% Category.excludes(:id => Category.first.id).each do |cat| %>
-          <li><%= link_to cat.name,cat %> </li>
-          <%end %>
-          <% end %>
-          </ul>
-                  </div>
-        </div>
-        </div>
-        </div>
+<nav id="navigation">
+  <h1> <%= link_to "Liberator", :root  %> </h3>
+  <ul class="nav">
+    
+    <% if can? :manage,Category%>
+      <% Category.excludes(:id=>Category.first.id).each do |cat| %>
+      <li><%= link_to cat.name,edit_category_path(cat)%></li>
+    <% end %>
+          
+    <% else %>
+      <% Category.excludes(:id => Category.first.id).each do |cat| %>
+      <li><%= link_to cat.name,cat %> </li>
+    <%end %>
+          
+    <% end %>
 
+  </ul>
+</nav>

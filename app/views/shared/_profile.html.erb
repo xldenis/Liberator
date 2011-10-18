@@ -1,19 +1,29 @@
+<div id="userbar">
+
 <% if user_signed_in? %>
-  <div id="status"><%= current_user.role.upcase%></div>
-  <div id="profile">
-  <% if can? :create, Article %>
-  <%= link_to image_tag("pen_alt_stroke.svg"),new_article_path %>
-  <%= link_to image_tag("list.svg"),articles_path %>
-  <% end %>
-  <% if can? :manage, @users %>
-    <%= link_to image_tag("cog.svg"), users_path %>
-  <% end %>
+ 
+  <div class="status"> <%= current_user.role.upcase%> </div>
+  
+  <div class="profile">
+    <% if can? :create, Article %>
+      <%= link_to image_tag("pen_alt_stroke.svg"),new_article_path %>
+      <%= link_to image_tag("list.svg"),articles_path %>
+    <% end %>
+    
+    <% if can? :manage, @users %>
+      <%= link_to image_tag("cog.svg"), users_path %>
+    <% end %>
           
-      <%= link_to image_tag("user.svg"), edit_user_registration_path %>
-      <%= link_to image_tag("lock_stroke.svg"), destroy_user_session_path %>
-  <% else %>
-   <div id="profile">
-   <%= link_to image_tag("key_stroke.svg"), new_user_session_path %>
-  <% end %>
+    <%= link_to image_tag("user.svg"), edit_user_registration_path %>
+    <%= link_to image_tag("lock_stroke.svg"), destroy_user_session_path %>
   </div>
 
+
+<% else %>
+  
+  <div class="profile">
+    <%= link_to "Log In", image_tag("login.png"), new_user_session_path %>
+    <% end %>
+  </div>
+
+</div>
