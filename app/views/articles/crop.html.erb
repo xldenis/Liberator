@@ -31,11 +31,11 @@ function update_crop(coords) {
 </script>
 <% end %>
 
-<%= image_tag @article.image_url(:large), :id => "cropbox" %>
+<%= image_tag @article.image_url, :id => "cropbox" %>
 
 <h3>Preview</h3>
 <div class="preview">
-    <%= image_tag @article.image_url(:large), :id => "preview" %>
+    <%= image_tag @article.image_url, :id => "preview" %>
 </div>
 
 <%= form_for @article, :as => :article, :url => { :action => "crop_update", :id => @article.id} do |f| %>

@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
+  include CarrierWave::RMagick
   storage :file
 
   def store_dir
@@ -24,16 +24,21 @@ class ImageUploader < CarrierWave::Uploader::Base
    def manualcrop
     return unless model.cropping?
     manipulate! do |img| 
-      debugger
       puts current_path
-      img = img.crop(model.crop_x.to_i,model.crop_y.to_i,model.crop_h.to_i,model.crop_w.to_i) 
+      img = img.crop(model.crop_x.to_i,model.crop_y.to_i,model.crop_w.to_i,model.crop_h.to_i) 
     end 
    end
+   version :test do
+    process :manualcrop
+   end
    version :large do
-    process :resize_to_fit => [500,500]
     process :manualcrop     
+    process :resize_to_fit => [960,540]
   end
    version :thumb do
+    process :manualcrop
+    process :resize_to_fit => [100,100]
+   
    end
 
    def extension_white_list
