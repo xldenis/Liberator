@@ -1,20 +1,20 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree .
+This is a manifest file that'll automatically include all the stylesheets available in this directory and any sub-directories. You're free to add application-wide styles to this file and they'll appear at the top of the compiled file, but it's generally better to create a new file per style scope.
+
+  = require_self
+  = require_tree .
+
 */
 
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic);
 
-/* HTML, body, link, paragraph, etc. styling */
+/* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #eee; padding: 20px auto 20px auto; }
+html { background-color: #fff; padding: 20 auto; }
 
 body {
-  background-color: #eee;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: "Crimson Text", Times, "Times New Roman", serif;
+  font-size: 18px;
 }
 
 a img { border: none; }
@@ -22,53 +22,203 @@ a {}
 a:hover {}
 
 
-/* Container, userbar, navbar, footer: basic structural layout */
+
+/* Container, userbar, navbar */
 
 #container {
   margin: 0 auto;
   width: 960px;
-
-  background: red;
+  overflow: auto;
 }
 
 #userbar {
   margin: 20px auto 20px auto;
-  padding: 20px;
+  padding: 20px 0 20px 0;
   width: 940px;
-  background: purple;
 }
+
+.status, .profile { font-style: italic; }
 
 .profile { float: right; }
 
-nav {
-  padding: 5px 0 5px 0;
-  background: blue;
+.profile a {
+  padding: 10px;
+  margin: 0 -10px 0 30px;
 }
 
-footer { text-align: center; margin: 20px; }
+nav ul {
+  display: block;
+  width: 940px;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: solid black;
+  border-width: 0 0 1px 0;
+}
+
+nav li {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  background: #eee;
+} a {color: #000;}
+
+nav li.home {
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1em;
+  width: 220px;
+  text-transform: none !important;
+  background: #000;
+} li.home a {color: #fff;}
+
+nav li a {
+  display: block;
+  padding: 20px 40px 20px 40px;
+}
+
+.alert-message {
+  padding: 10px;
+  background: red;
+}
+
+
+/* Editor's layout-edit menu */
+
+.open {
+  display: block !important;
+  background-color:black;
+}
+
+#layout-menu {
+  display: block;
+  width: 960px;
+  max-height: 270px;
+  margin: 20px auto 20px auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+#list {
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow: auto;
+}
+
+#list li {
+  display: inline-block;
+  float: left;
+  width: 208px;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+  background: #eee;
+  cursor: move;
+
+  -moz-border-radius: 5px; /* Firefox */
+  -webkit-border-radius: 5px; /* Safari, Chrome */
+  border-radius: 5px; /* CSS3 */
+
+  background-image: linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
+  background-image: -o-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
+  background-image: -moz-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
+  background-image: -webkit-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
+  background-image: -ms-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.14, rgb(250,250,250)),
+    color-stop(0.79, rgb(224,224,224))
+  );
+}
+
+#submit {
+  display: block;
+  width: 208px;
+  float: right;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #000;
+}
+
 
 
 /* Frontpage layout */
 
-.article { background: #fff !important; }
-
-.normal {
+.article {
   display: inline-block;
-  width: 200px;
+  float: left;
+  width: 180px;
   height: 200px;
-  padding: 20px;
-  margin: -2px;
+  margin: 10px;
+  padding: 0 20px 0 20px;
+  background: #f9f9f9;
+  border: dotted black;
+  border-width: 1px 0 1px 0;
 }
 
 .featured {
   display: block;
-  margin: auto;
-  width: 940px;
-  height: 350px;
-  background: green !important;
+  width: 900px;
 }
 
 
 
+/* Sign-in form */
 
+form {
+  width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #eee;
+}
 
+legend {
+  font-size: 2em;
+  font-style: italic;
+}
+
+li {
+  display: block;
+  margin: 10px 0 20px -40px;
+}
+
+input {
+  font-family: "Crimson Text", Times, "Times New Roman", serif;
+  width: 575px;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+input#user_remember_me { width: 30px; }
+
+label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
+
+.btn {
+  margin: auto auto auto -40px;
+  display: block;
+  font-family: "Crimson Text", Times, "Times New Roman", serif;
+  width: 600px;
+  color: #fff;
+  background: #000;
+  border: none;
+}
+
+/* Individual article layout */
+
+article { padding: 10px 250px 20px 10px; }
+
+article h1 { 
+  font-size: 2em;
+}
+
+article .slug { font-style: italic; }

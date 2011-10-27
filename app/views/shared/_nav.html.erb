@@ -1,7 +1,9 @@
-<nav id="navigation">
-  <h1> <%= link_to "Liberator", :root  %> </h3>
+<nav>
+
   <ul class="nav">
     
+    <li class="home"> <%= link_to "the Liberator.", :root  %> </li>
+
     <% if can? :manage,Category%>
       <% Category.excludes(:id=>Category.first.id).each do |cat| %>
       <li><%= link_to cat.name,edit_category_path(cat)%></li>
@@ -15,4 +17,5 @@
     <% end %>
 
   </ul>
+
 </nav>

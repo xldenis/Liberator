@@ -1,13 +1,13 @@
 $ ->
   article = $('.article')
-  submit = $('#submit-button')
-  list = $('div',"#layout-menu")
+  submit = $('#submit')
+  list = $('ul',"#list")
   content = $('.content')
-  toggle = $('#toggle')
+  status = $('#status')
 
-  toggle.live 'click',->
-    $('#article-list').toggleClass 'open'
-  
+  status.live 'click',->
+    $('#BROKEN').toggleClass 'open'
+
   serialize =->
     for elem in article
       do (elem) ->
@@ -18,15 +18,15 @@ $ ->
 
   enabledroppable =->
     article = $('.article') 
-    article.droppable accept: "#article-list >li",
+    article.droppable accept: "#list >li",
       drop: (event, ui) ->
         $(@).html ui.draggable
         $(@).data 'id',ui.draggable.data 'id'
     true
 
-  enabledraggable=->
-    list = $('ul',"#article-list")
-    list.draggable
+  enabledraggable=-> 
+    list = $('li',"#list")
+    list.draggable 
       cancel: "a.ui-icon",
       revert: "invalid",
       helper: "clone",
@@ -39,7 +39,7 @@ $ ->
   submit.live 'ajax:before',->
     $(this).data('params',{front_page_articles: serialize()})
 
-  submit.live 'ajax:success',(xhr,data,toggle) ->
+  submit.live 'ajax:success',(xhr,data,status) ->
     data = eval data
     data_list = data[0]
     html = data[1]
@@ -50,5 +50,5 @@ $ ->
     content.html html
     enabledroppable()
     true
+
   true
-  

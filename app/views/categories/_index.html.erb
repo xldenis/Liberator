@@ -1,33 +1,29 @@
 <% if articles %>
-	<% articles.each_with_index do |article,index| %>
-	<div <% if index==0 %>
-		class="article featured" <% else %>
-		class="article normal" <% end %>
-		data-id="<%= if article then article.id else end %>" >
-		
-		<% if article %>
-			<h2><%= article.title %></h2>
-			<p><%= article.slug %></p>
-			<%= link_to "Read more...", article %>
+ 	<% articles.each_with_index do |article,index| %>
+       <div <% if index==0 %>
+               class="article featured" <% else %>
+               class="article secondary" <% end %>
+               data-id="<%= if article then article.id else end %>">
+               <% if article %>
+                       <h2><%= article.title %></h2>
+                       <p><%= article.slug %></p>
+                       <%= link_to "Keep reading →", article %>
 
 <% else %>
-	<div> <h2>Empty Placeholder</h2> </div>
+               <h2>Placeholder Title</h2>
+               <p>Dummy text.</p>
+       <% end %>
+       </div>
 
 <% end %>
-
-</div>
-
-<% end %>
-
 
 <% else %>
-	<% 9.times do |index|%>
-	<div <% if index==0 %>
-		class="article featured" <% else %>
-		class="article normal"<% end %>>
-
-		<h2>Empty Placeholder</h2>
-	</div>
-
-<% end %>
-<% end %>
+       <% 9.times do |index|%>
+               <div <% if index==0 %>
+                       class="article featured" <% else %>
+                       class="article secondary" <% end %>>
+                       <h2>Placeholder Title</h2>
+                       <p>Dummy text.</p>
+               </div>
+       <% end %>
+       <% end %>
