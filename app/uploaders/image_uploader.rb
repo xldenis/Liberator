@@ -28,8 +28,8 @@ class ImageUploader < CarrierWave::Uploader::Base
       img = img.crop(model.crop_x.to_i,model.crop_y.to_i,model.crop_w.to_i,model.crop_h.to_i) 
     end 
    end
-   version :test do
-    process :manualcrop
+   version :scaled_orig do
+    process :resize_to_fit => [960,540]
    end
    version :large do
     process :manualcrop     

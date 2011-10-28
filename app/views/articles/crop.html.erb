@@ -31,7 +31,7 @@ function update_crop(coords) {
 </script>
 <% end %>
 
-<%= image_tag @article.image_url, :id => "cropbox" %>
+<%= image_tag @article.image_url(:scaled_orig), :id => "cropbox" %>
 
 <h3>Preview</h3>
 <div class="preview">
