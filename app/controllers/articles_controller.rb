@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
    if @article.update_attributes!(temp_params)
       flash[:notice] = "Article Successfully Updated."
       respond_to do |format|
-        format.html{redirect_to @article}
+        format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article end }
         format.js{}
       end
     else

@@ -3,10 +3,10 @@ $ ->
   submit = $('#submit')
   list = $('ul',"#list")
   content = $('.content')
-  status = $('#status')
+  status = $('.status')
 
   status.live 'click',->
-    $('#BROKEN').toggleClass 'open'
+    $('#layout-menu').toggleClass 'open'
 
   serialize =->
     for elem in article
@@ -44,7 +44,7 @@ $ ->
     data_list = data[0]
     html = data[1]
     list.remove()
-    $('#article-list').append data_list
+    $('#list').append data_list
     enabledraggable()
     article.droppable "destroy"
     content.html html

@@ -3,7 +3,8 @@
        <div <% if index==0 %>
                class="article featured" <% else %>
                class="article secondary" <% end %>
-               data-id="<%= if article then article.id else end %>">
+               data-id="<%= if article then article.id else end %>"
+               style= "background:url('<%= article.image_url(:large) if article && article.image?%>');">
                <% if article %>
                        <h2><%= article.title %></h2>
                        <p><%= article.slug %></p>
