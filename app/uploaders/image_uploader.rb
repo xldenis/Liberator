@@ -7,9 +7,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+  def cache_dir
+   "uploads/cache"
+  end
   def geometry
     if self.file
-    img = MiniMagick::Image.open(self.file.path)
+    img = MiniMagick::Image.open(self.url)
     @geometry = {:width => img[:width], :height=> img[:height] }
     else
     nil
