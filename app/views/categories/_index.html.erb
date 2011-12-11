@@ -6,10 +6,11 @@
                data-id="<%= if article then article.id else end %>"
                style= "background:url('<%= article.image_url(:large) if article && article.image?%>');">
                <% if article %>
+                      <div class="frosty">
                        <h2><%= article.title %></h2>
                        <p><%= article.slug %></p>
                        <%= link_to "Keep reading →", article %>
-
+</div>
 <% else %>
                
                <h2>Placeholder Title</h2>
