@@ -9,6 +9,9 @@
 Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 Category.create(:name => "Everything",:front_page_articles => nil)
 Category.create(:name => "Sports")
+Category.create(:name => "Commentary")
+Category.create(:name => "Entertainment")
+Category.create(:name => "Life & Feature")
 cat = Category.create(:name =>  "News", :front_page_articles => nil)
 
 15.times do |index|
