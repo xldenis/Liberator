@@ -165,11 +165,21 @@ nav li a {
   border: dotted black;
   border-width: 1px 0 1px 0;
 }
-
 .featured {
+  
   display: block;
   width: 900px;
   height: 540px;
+}
+.featured h2{
+font-size: 4em;
+margin:0px;
+}
+.featured p {
+font-size: 2em;
+margin:0px;
+line-height: .5em;
+font-style: italic;
 }
 
 
@@ -201,7 +211,6 @@ input {
 }
 
 input#user_remember_me { width: 30px; }
-
 label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
 .btn {
@@ -223,3 +232,6 @@ article h1 {
 }
 
 article .slug { font-style: italic; }
+.frosty{
+background:rgba(255,255,255,.8);
+}
