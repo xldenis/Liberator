@@ -51,6 +51,7 @@ nav ul {
   width: 940px;
   margin: auto;
   padding: 0;
+  background:#eee;
   overflow: auto;
   border: solid black;
   border-width: 0 0 1px 0;
