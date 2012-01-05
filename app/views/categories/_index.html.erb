@@ -9,6 +9,7 @@
                       <div class="frosty">
                        <h2><%= article.title %></h2>
                        <p><%= article.slug %></p>
+                       <% if index==0 %><p><%= truncate(article.content,:length=>150,:separator=>'.') %></p><% end %>
                        <%= link_to "Keep reading →", article %>
 </div>
 <% else %>

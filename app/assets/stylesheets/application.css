@@ -107,14 +107,14 @@ nav li a {
 #list {
   margin: 0;
   padding: 0;
-  max-height: 220px;
+  max-height: 230px;
   overflow: auto;
 }
 
 #list li {
   display: inline-block;
   float: left;
-  width: 208px;
+  width: 200px;
   padding: 10px;
   margin: 10px 0 0 10px;
   background: #eee;
