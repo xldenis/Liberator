@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   load_and_authorize_resource
   def index
     @article = Article.all
+    @article_months = @article.group_by { |a| a.created_at.beginning_of_month }
   end
   def create
     @article = current_user.articles.new

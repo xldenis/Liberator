@@ -2,6 +2,8 @@
 <p style="float:right"><%= link_to "New Article", new_article_path%></p>
 <div class="row" >
 <div class="span12 columns">
+<% @article_months.each do |month,articles| %>
+<h2><%= month.strftime('%B') %> </h2>
 <table >
 <thead>
   <tr>
@@ -12,8 +14,9 @@
   </tr>
 </thead>
 <tbody>
-<%= render :partial => "list" %>
+<%= render :partial => "list", :locals=>{:articles => articles} %>
 </tbody>
 </table>
+<% end %>
 </div>
 </div>
