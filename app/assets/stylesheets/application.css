@@ -48,11 +48,12 @@ a:hover {}
 
 nav ul {
   display: block;
-  width: 940px;
+  width: 960px;
   margin: auto;
   padding: 0;
   background:#eee;
   overflow: auto;
+  background:#eee;
   border: solid black;
   border-width: 0 0 1px 0;
 }
@@ -158,18 +159,19 @@ nav li a {
 .article {
   display: inline-block;
   float: left;
-  width: 180px;
+  width: 220px;
   height: 200px;
-  margin: 10px;
-  padding: 0 20px 0 20px;
+  margin:10px;
+  padding: 0 0px 0 0px;
   background: #f9f9f9;
   border: dotted black;
   border-width: 1px 0 1px 0;
 }
 
 .featured {
+  margin-left:0px;
   display: block;
-  width: 900px;
+  width: 960px;
   height: 540px;
 }
 
@@ -178,7 +180,7 @@ nav li a {
 /* Sign-in form */
 
 form {
-  width: 900px;
+  width: 920px;
   margin: auto;
   padding: 20px;
   background: #eee;
@@ -194,15 +196,17 @@ li {
   margin: 10px 0 20px -40px;
 }
 
-input {
+input,select,textarea{
   font-family: "Crimson Text", Times, "Times New Roman", serif;
   width: 575px;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 input#user_remember_me { width: 30px; }
-
+textarea{
+  border:none;
+}
 label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
 .btn {
@@ -224,6 +228,9 @@ article h1 {
 }
 
 article .slug { font-style: italic; }
-.frosty { background:rgba(255,255,255,.8);}
+.frosty { 
+  background:rgba(255,255,255,.8);
+  padding: 0px 30px 0px 15px;
+}
 .secondary h2{ font-size:1em;}
 .secondary p{ font-size:.75em;}
