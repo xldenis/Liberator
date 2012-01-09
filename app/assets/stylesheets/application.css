@@ -225,5 +225,5 @@ article h1 {
 
 article .slug { font-style: italic; }
 .frosty { background:rgba(255,255,255,.8);}
-.frosty h2{ font-size:1em;}
-.frosty p{ font-size:.75em;}
+.secondary h2{ font-size:1em;}
+.secondary p{ font-size:.75em;}
