@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   if can? :manage, Category
   redirect_to edit_category_path(@category)
   end
+  
   end
   def index
   @categories = Category.excludes(Category.first.id)
@@ -13,6 +14,7 @@ class CategoriesController < ApplicationController
   def show
   @category = Category.find(params[:id])
   @articles = @category.front_to_articles
+  render "#{@category.name.downcase }_show" rescue nil
   end
   def edit 
   @category = Category.find(params[:id])
@@ -22,7 +24,7 @@ class CategoriesController < ApplicationController
   else
   @articles = @category.articles.to_a
   end
-
+  render "#{@category.name.downcase}_edit" rescue nil
   end
   def update 
   @category = Category.find(params[:id])

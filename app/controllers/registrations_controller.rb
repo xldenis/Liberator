@@ -24,5 +24,7 @@ class RegistrationsController < Devise::RegistrationsController
     #@user.reset_authentication_token!
     redirect_to edit_user_registration_path(@user)
   end
-
+  def new
+    redirect_to :root
+  end
 end

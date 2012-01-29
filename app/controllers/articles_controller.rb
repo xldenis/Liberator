@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
       @article.save
      flash[:success]= "Article successfully created."
       respond_to do |format|
-       format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
+       format.html{if params[:article][:image]||params[:article][:remote_image_url] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
       end
     else
       flash[:error]="Check yo self fool." 
@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    render "#{@article.article_category.name.downcase}_show" rescue nil
   end
 
   def edit
