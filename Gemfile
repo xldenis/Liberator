@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -12,15 +12,14 @@ gem 'redcarpet'
 gem 'carrierwave-mongoid', :require=>'carrierwave/mongoid'
 gem 'rmagick'
 gem 'mini_magick'
-gem 'rack', "~> 1.3.4"
 gem 'fog'
 gem 'truncate_html'
 gem 'unicorn'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
 end
 group :production do
