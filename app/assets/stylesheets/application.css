@@ -233,11 +233,21 @@ article h1 {
 }
 
 article .slug { font-style: italic; }
-.per-article-overlay { 
-  margin-top:-15px;
-  width:915px;
-  padding: 0px 30px 0px 15px;
+
+.per-article-overlay {
+  margin: 0;
   background: rgba(255, 255, 255, 0.5);
 }
-.secondary h2{ font-size:1em;}
-.secondary p{ font-size:.75em;}
+
+.featured .per-article-overlay {
+  margin-top: -20px;
+  width: 915px;
+  padding: 30px;
+}
+
+.secondary .per-article-overlay {
+  
+}
+
+.secondary h2{ font-size: 1.1em;}
+.secondary p{ font-size: 1em;}
