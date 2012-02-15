@@ -117,7 +117,7 @@ nav li a {
 
 #list {
   margin: 0;
-  padding: 0 0 15px 0;
+  padding: 0 0 13px 0;
   max-height: 230px;
   overflow: auto;
 }
@@ -186,7 +186,7 @@ nav li a {
 }
 
 .ui-draggable {
-  margin: auto auto auto 20px;
+  margin: 15px auto auto 10px;
 }
 
 
