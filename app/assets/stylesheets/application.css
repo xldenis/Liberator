@@ -104,7 +104,7 @@ nav li a {
 #layout-menu {
   display: block;
   width: 960px;
-  max-height: 280px;
+  max-height: 283px;
   margin: 20px auto 35px auto;
   padding: 0;
   overflow: auto;
@@ -117,7 +117,7 @@ nav li a {
 
 #list {
   margin: 0;
-  padding: 0 0 15px 0;
+  padding: 0 0 10px 0;
   max-height: 230px;
   overflow: auto;
 }
