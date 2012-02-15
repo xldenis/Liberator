@@ -39,7 +39,9 @@ a:hover {}
 }
 footer{
   width:960px;
-  margin: 15px auto 30px auto;
+  margin: 30px auto 60px auto;
+  font-size: .75em;
+  text-align: center;
 }
 .status, .profile { font-style: italic; }
 
