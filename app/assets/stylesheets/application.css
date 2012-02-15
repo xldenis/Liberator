@@ -246,13 +246,13 @@ article .slug { font-style: italic; }
 .per-article-overlay {
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0 .25em #666;
+  text-shadow: 0 0 .25em #888;
 }
 
 .featured .per-article-overlay {
   margin-top: -20px;
   width: 915px;
-  padding: 30px;
+  padding: 0 30px;
 }
 
 .secondary .per-article-overlay {
