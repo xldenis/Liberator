@@ -40,7 +40,7 @@ a:hover {}
 footer{
   width:960px;
   margin: 60px auto 60px auto;
-  padding: 30px auto;
+  padding: 60px auto;
   font-size: .75em;
   text-align: center;
 }
@@ -242,8 +242,8 @@ article .slug { font-style: italic; }
 
 .per-article-overlay {
   margin: 0;
-  background: rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 .25em #000;
+  background: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 .25em #eee;
 }
 
 .featured .per-article-overlay {
