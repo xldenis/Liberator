@@ -104,7 +104,7 @@ nav li a {
 #layout-menu {
   display: block;
   width: 960px;
-  max-height: 270px;
+  max-height: 280px;
   margin: 20px auto 35px auto;
   padding: 0;
   overflow: auto;
@@ -185,6 +185,10 @@ nav li a {
   height: 540px;
 }
 
+ui-draggable {
+  margin: auto auto auto 20px;
+}
+
 
 
 /* Sign-in form */
@@ -242,7 +246,7 @@ article .slug { font-style: italic; }
 .per-article-overlay {
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0 .25em #999;
+  text-shadow: 0 0 .25em #000;
 }
 
 .featured .per-article-overlay {
