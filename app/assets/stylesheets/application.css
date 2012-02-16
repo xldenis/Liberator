@@ -39,8 +39,10 @@ a:hover {}
 }
 footer{
   width:960px;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 60px auto 60px auto;
+  padding: 60px auto;
+  font-size: .75em;
+  text-align: center;
 }
 .status, .profile { font-style: italic; }
 
@@ -102,17 +104,20 @@ nav li a {
 #layout-menu {
   display: block;
   width: 960px;
-  max-height: 270px;
-  margin: 20px auto 20px auto;
+  max-height: 285px;
+  margin: 20px auto 35px auto;
   padding: 0;
   overflow: auto;
   border: 1px solid black;
   display:none;
+  -moz-box-shadow:     0 0 7px #000;
+  -webkit-box-shadow:  0 0 7px #000;
+  box-shadow:          0 0 7px #000;
 }
 
 #list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 10px 0;
   max-height: 230px;
   overflow: auto;
 }
@@ -147,10 +152,10 @@ nav li a {
 
 #submit {
   display: block;
-  width: 208px;
+  width: 960px;
   float: right;
   text-align: center;
-  margin: 10px;
+  margin: 0;
   padding: 10px;
   text-transform: uppercase;
   color: #fff;
@@ -178,6 +183,10 @@ nav li a {
   display: block;
   width: 960px;
   height: 540px;
+}
+
+.ui-draggable {
+  margin: 15px auto auto 10px;
 }
 
 
@@ -233,10 +242,22 @@ article h1 {
 }
 
 article .slug { font-style: italic; }
-.frosty { 
-  margin-top:-15px;
-  width:915px;
-  padding: 0px 30px 0px 15px;
+
+.per-article-overlay {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 .25em #888;
 }
-.secondary h2{ font-size:1em;}
-.secondary p{ font-size:.75em;}
+
+.featured .per-article-overlay {
+  margin-top: -20px;
+  width: 915px;
+  padding: 15px 30px 30px 30px;
+}
+
+.secondary .per-article-overlay {
+  
+}
+
+.secondary h2{ font-size: 1.1em;}
+.secondary p{ font-size: 1em;}
