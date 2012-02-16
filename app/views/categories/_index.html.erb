@@ -4,12 +4,12 @@
                class="article featured" <% else %>
                class="article secondary" <% end %>
                data-id="<%= if article then article.id else end %>"
-               style= "background:url('<%= article.image_url(:large) if article && article.image?%>');">
+               style= "background:url('<%= article.image_url(:large) if article && article.image? && index == 0%>');">
                <% if article %>
                       <div class="per-article-overlay">
                        <h2><%= article.title %></h2>
                        <p><%= article.slug %></p>
-                       <% if index==0 %><p><%= truncate(article.content,:length=>150,:separator=>'.') %></p><% end %>
+                       <% if index==0 %><p><%= truncate(article.content,:length=>450,:separator=>'.') %></p><% end %>
                        <%= link_to "Keep reading →", article %>
 </div>
 <% else %>
