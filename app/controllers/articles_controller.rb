@@ -58,7 +58,7 @@ class ArticlesController < ApplicationController
         flash[:notice] = "Article deleted."
         respond_to do |format|
         format.html{redirect_to articles_path}
-        format.js{@article = Article.all}
+        format.js{@articles = Article.all}
         end
       else
         flash[:error] = "Try Again."

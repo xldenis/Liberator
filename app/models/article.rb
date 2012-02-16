@@ -42,10 +42,12 @@ class Article
   end
   end
   def remove_frontpage
-    if index = self.article_category.front_page_articles.index(self.id.to_s)
-      self.category.front_page_articles[index]="nil"
-      self.category.save
-  end
+    self.categories.each do |cat|
+    if cat.front_page_articles &&(index=  cat.front_page_articles.index(self.id.to_s))
+     cat.front_page_articles[index]="nil"
+     cat.save
+    end
+    end
   end
   def reprocess_image
     self.image.recreate_versions!
