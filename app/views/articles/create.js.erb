@@ -1,5 +1,5 @@
 <% if flash[:success] %>
-setTimeout(function(){window.location="<%= url_for(@article) %>";},1000);
+window.location="<%=url_for(Article)%>"; 
 <% else %>
 $(".alert-message info").hide(300);
 $(".alert-message error").hide(300);
