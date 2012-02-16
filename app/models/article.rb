@@ -1,7 +1,7 @@
 class Article
   include Mongoid::Document
   include Mongoid::Timestamps
-  
+  include Mongoid::Document::Taggable 
   belongs_to :user
   has_and_belongs_to_many :categories 
   mount_uploader :image, ImageUploader
@@ -42,7 +42,7 @@ class Article
   end
   end
   def remove_frontpage
-    if index = self.category.front_page_articles.index(self.id.to_s)
+    if index = self.article_category.front_page_articles.index(self.id.to_s)
       self.category.front_page_articles[index]="nil"
       self.category.save
   end

@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-gem 'mongoid', '= 2.3.0'
-gem 'bson', '= 1.4.0'
-gem 'bson_ext', '= 1.4.0'
+gem 'mongoid'
+gem 'bson'
+gem 'bson_ext'
 gem 'heroku'
 gem 'redcarpet'
 gem 'carrierwave-mongoid', :require=>'carrierwave/mongoid'
