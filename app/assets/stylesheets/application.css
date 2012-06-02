@@ -70,7 +70,7 @@ nav li {
   float: left;
   margin: 0;
   font-size: 1em;
-  line-height: 1.3em;
+  line-height: 1.3em !important;
   text-transform: uppercase;
   background: #eee;
 } a {color: #000;}
@@ -138,7 +138,8 @@ nav li a {
   
   border-radius: 3px;
 
-  background: -webkit-linear-gradient(rgba(0,0,0,0.32) 0%, #e6e1e1 100%);
+  color: #fff;
+  background: -webkit-linear-gradient(rgba(39,39,39,1) 0%, #000000 100%);
 }
 
 #submit {
@@ -162,7 +163,6 @@ nav li a {
   float: left;
   width: 220px;
   height: 200px;
-  margin:10px;
   padding: 0 0px 0 0px;
   background: #f9f9f9;
   border: solid black;
@@ -170,15 +170,46 @@ nav li a {
 }
 
 .featured {
-  margin-left:0px;
+  margin: 0px 5px;
   display: block;
-  width: 740px;
+  width: 700px;
   height: 400px;
+}
+
+.secondary {
+	margin: 10px 5px;
 }
 
 .ui-draggable {
   margin: 15px auto auto 10px;
 }
+
+
+
+
+/* Individual article layout */
+
+article { padding: 10px; }
+
+article h1 { 
+  font-size: 2em;
+}
+
+article .slug { font-style: italic; }
+
+.per-article-overlay {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 .25em #888;
+}
+
+.featured .per-article-overlay {
+  margin-top: -20px;
+  padding: 15px 30px 30px 30px;
+}
+
+.secondary h2{ font-size: 1.1em;}
+.secondary p{ font-size: 1em;}
 
 
 
@@ -224,30 +255,3 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
   border: none;
 }
 
-/* Individual article layout */
-
-article { padding: 10px; }
-
-article h1 { 
-  font-size: 2em;
-}
-
-article .slug { font-style: italic; }
-
-.per-article-overlay {
-  margin: 0;
-  background: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0 .25em #888;
-}
-
-.featured .per-article-overlay {
-  margin-top: -20px;
-  padding: 15px 30px 30px 30px;
-}
-
-.secondary .per-article-overlay {
-  
-}
-
-.secondary h2{ font-size: 1.1em;}
-.secondary p{ font-size: 1em;}
