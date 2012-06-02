@@ -89,10 +89,17 @@ nav li a {
   padding: 10px;
 }
 
-.alert-message {
+.alert-message  {
   padding: 10px;
-  background: red;
+  margin: 0 0 15px 0;
+  color: #fff;
+  background: #ff9d9d;
 }
+
+.alert-message success {
+  background: #94ff94
+}
+
 
 
 /* Editor's layout-edit menu */
