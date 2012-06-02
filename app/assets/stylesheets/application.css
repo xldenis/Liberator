@@ -135,20 +135,10 @@ nav li a {
   -moz-border-radius: 5px; /* Firefox */
   -webkit-border-radius: 5px; /* Safari, Chrome */
   border-radius: 5px; /* CSS3 */
+  
+  border-radius: 3px;
 
-  background-image: linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
-  background-image: -o-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
-  background-image: -moz-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
-  background-image: -webkit-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
-  background-image: -ms-linear-gradient(top, rgb(250,250,250) 14%, rgb(224,224,224) 79%);
-
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0.14, rgb(250,250,250)),
-    color-stop(0.79, rgb(224,224,224))
-  );
+  background: -webkit-linear-gradient(rgba(0,0,0,0.32) 0%, #e6e1e1 100%);
 }
 
 #submit {
@@ -182,7 +172,7 @@ nav li a {
 .featured {
   margin-left:0px;
   display: block;
-  width: 600px;
+  width: 740px;
   height: 400px;
 }
 
