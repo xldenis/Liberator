@@ -4,6 +4,7 @@ $ ->
   list = $('li',"#list")
   content = $('.content')
   status = $('.status')
+
   ajaxsuccess = (xhr,data,status) ->
     data = eval data
     data_list = data[0]
@@ -14,8 +15,7 @@ $ ->
     article.droppable "destroy"
     content.html html
     enabledroppable()
-  tst =(xhr,data,status)->
-    console.log data
+
   status.live 'click',->
     $('#layout-menu').toggleClass 'open'
   livesave =->
@@ -41,6 +41,10 @@ $ ->
         $(@).html ui.draggable
         $(@).data 'id',ui.draggable.data 'id'
         livesave()
+      over: (event,ui) ->
+        $(@).animate({'backgroundColor': '#000'})
+      out: (event,ui) ->
+        $(@).animate({'backgroundColor': '#FFF'})
     true
 
   enabledraggable=-> 
