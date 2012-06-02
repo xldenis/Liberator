@@ -42,7 +42,7 @@ $ ->
         $(@).data 'id',ui.draggable.data 'id'
         livesave()
       over: (event,ui) ->
-        $(@).animate({'backgroundColor': '#000'})
+        $(@).animate({'backgroundColor': '#000 !important'})
       out: (event,ui) ->
         $(@).animate({'backgroundColor': '#FFF'})
     true
