@@ -1,13 +1,31 @@
 $ ->
   article = $('.article')
   submit = $('#submit')
-  list = $('ul',"#list")
+  list = $('li',"#list")
   content = $('.content')
   status = $('.status')
-
+  ajaxsuccess = (xhr,data,status) ->
+    data = eval data
+    data_list = data[0]
+    html = data[1]
+    list.remove()
+    $('#list').append data_list
+    enabledraggable()
+    article.droppable "destroy"
+    content.html html
+    enabledroppable()
+  tst =(xhr,data,status)->
+    console.log data
   status.live 'click',->
     $('#layout-menu').toggleClass 'open'
-
+  livesave =->
+    $.ajax {
+      url: location.href.substr(0,location.href.length-5 )
+      type: 'PUT'
+      data: {front_page_articles: serialize()}
+      success: (data,status,xhr)->
+        ajaxsuccess(xhr,data,status)
+    }
   serialize =->
     for elem in article
       do (elem) ->
@@ -22,6 +40,7 @@ $ ->
       drop: (event, ui) ->
         $(@).html ui.draggable
         $(@).data 'id',ui.draggable.data 'id'
+        livesave()
     true
 
   enabledraggable=-> 
@@ -35,19 +54,13 @@ $ ->
 
   enabledroppable()
   enabledraggable()
+  article.live 'ajaxSuccess', (xhr,data,status) ->
+    ajaxsuccess(xhr,data,status)
   submit.live 'ajax:before',->
     $(this).data('params',{front_page_articles: serialize()})
 
-  submit.live 'ajax:success',(xhr,data,status) ->
-    data = eval data
-    data_list = data[0]
-    html = data[1]
-    list.remove()
-    $('#list').append data_list
-    enabledraggable()
-    article.droppable "destroy"
-    content.html html
-    enabledroppable()
-    true
+  submit.live 'ajax:success', (xhr,data,status) ->
+    ajaxsuccess(xhr,data,status)
 
   true
+
