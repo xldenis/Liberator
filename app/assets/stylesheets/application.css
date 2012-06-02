@@ -48,7 +48,11 @@ footer{
 }
 
 .status, .profile { font-style: italic; }
- 
+
+.profile {
+	float: right;
+}
+
 .profile a {
   padding: 10px;
   margin: 0 -10px 0 30px;
@@ -97,7 +101,7 @@ nav li a {
   background: #ff9d9d;
 }
 
-.alert-message success {
+.alert-message success, .alert-message notice {
   background: #94ff94
 }
 
@@ -180,7 +184,7 @@ nav li a {
   margin: 0px 5px;
   display: block;
   width: 700px;
-  height: 400px;
+  height: 480px;
 }
 
 .secondary {
@@ -204,12 +208,13 @@ article .slug { font-style: italic; }
 
 .per-article-overlay {
   margin: 0;
+  height: 230px;
   background: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 .25em #888;
 }
 
 .featured .per-article-overlay {
-  margin-top: -20px;
+  height: 460px;
   padding: 15px 30px 30px 30px;
 }
 
