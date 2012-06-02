@@ -37,6 +37,7 @@ a:hover {}
   padding: 20px 0 20px 0;
   width: 940px;
 }
+
 footer{
   width:960px;
   margin: 60px auto 60px auto;
@@ -44,10 +45,8 @@ footer{
   font-size: .75em;
   text-align: center;
 }
-.status, .profile { 
-  font-style: italic;
-  clear: left;
-}
+
+.status, .profile { font-style: italic; }
  
 .profile a {
   padding: 10px;
@@ -79,7 +78,7 @@ nav li {
 nav li.home {
   font-weight: bold;
   font-size: 1.3em;
-  line-height: 1em;
+  line-height: 3em;
   width: 220px;
   text-transform: none !important;
   background: #000;
@@ -131,6 +130,7 @@ nav li a {
   margin: 10px 0 0 10px;
   background: #eee;
   cursor: move;
+  overflow: hidden;
 
   -moz-border-radius: 5px; /* Firefox */
   -webkit-border-radius: 5px; /* Safari, Chrome */
@@ -175,7 +175,7 @@ nav li a {
   margin:10px;
   padding: 0 0px 0 0px;
   background: #f9f9f9;
-  border: dotted black;
+  border: solid black;
   border-width: 1px 0 1px 0;
 }
 
@@ -236,7 +236,7 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
 /* Individual article layout */
 
-article { padding: 10px 250px 20px 10px; }
+article { padding: 10px; }
 
 article h1 { 
   font-size: 2em;
