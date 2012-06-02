@@ -5,14 +5,6 @@
 <% @article_months.each do |month,articles| %>
 <h2><%= month.strftime('%B') %> </h2>
 <table >
-<thead>
-  <tr>
-    <td>Title </td>
-    <td>Slug</td>
-    <td>Edit</td>
-    <td>Delete</td>
-  </tr>
-</thead>
 <tbody>
 <%= render :partial => "list", :locals=>{:articles => articles} %>
 </tbody>

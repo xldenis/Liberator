@@ -44,7 +44,10 @@ footer{
   font-size: .75em;
   text-align: center;
 }
-.status, .profile { font-style: italic; }
+.status, .profile { 
+  font-style: italic;
+  clear: left;
+}
  
 .profile a {
   padding: 10px;

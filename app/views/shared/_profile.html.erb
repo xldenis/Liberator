@@ -1,6 +1,6 @@
+<% if user_signed_in? %>
 <div id="userbar">
 
-<% if user_signed_in? %>
  
   <span class="status"> <%= current_user.role.upcase%> </span>
   
@@ -29,6 +29,6 @@
   </div>
 
 
-<% end %>
 
 </div>
+<% end %>
