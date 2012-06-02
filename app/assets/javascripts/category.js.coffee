@@ -35,7 +35,6 @@ $ ->
 
   enabledroppable()
   enabledraggable()
-
   submit.live 'ajax:before',->
     $(this).data('params',{front_page_articles: serialize()})
 
