@@ -34,6 +34,7 @@ nav ul {
   background: blue;
   overflow: auto;
   border-bottom: 1px solid black;
+  background: #eee;
 }
 
 nav li {
@@ -41,12 +42,11 @@ nav li {
   padding: 20px 10px 20px 10px;
   margin: 0 -2px 0 -2px;
   text-transform: uppercase;
-  background: #eee;
 }
 
-nav li a { color: #000; padding: 20px; }
+nav li a { color: #000; padding: 40px; }
 
-nav li a:hover { color: #000; background: #FFF; }
+nav li a:hover { color: #FFF; background: #000; }
 
 nav li.home {
   font-weight: bold;
