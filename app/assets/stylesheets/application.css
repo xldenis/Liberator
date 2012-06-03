@@ -16,7 +16,9 @@ body {
   font-family: Helvetica, "Crimson Text", Times, "Times New Roman", serif;
   font-size: 16px;
   width: 960px;
-  margin: 25px auto 25px auto;
+  min-height: 100%;
+  margin: auto;
+  padding: 25px auto 25px auto;
 }
 
 a img { border: none; }
@@ -29,13 +31,14 @@ nav ul {
   display: block;
   padding: 0;
   width: 950px;
-  margin: auto;
+  margin: auto ;
   background: blue;
   overflow: auto;
 }
 
 nav li {
   display: inline-block;
+  list-style-type: none;
   padding: 20px 10px 20px 10px;
   margin: 0;
   text-transform: uppercase;
