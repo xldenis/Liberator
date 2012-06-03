@@ -165,17 +165,13 @@ footer {
   height: 220px;
   padding: 10px;
   background: #fff6a1;
-  margin: 0;
+  margin: 5px;
 }
 
 .featured {
   display: block;
   width: 690px;
   height: 480px;
-}
-
-.secondary {
-	margin: 10px 5px;
 }
 
 .ui-draggable {
