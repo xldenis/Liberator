@@ -10,13 +10,12 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #eee; height: 100%; }
+html { background-color: #eee; }
 
 body {
   font-family: Georgia, "Crimson Text", Times, "Times New Roman", serif;
   font-size: 16px;
   width: 960px;
-  min-height: 100%;
   margin: auto;
   padding: 25px;
   background: #f4e4e4;
@@ -30,7 +29,7 @@ a img { border: none; }
 
 nav ul {
   display: block;
-  padding: 0;
+  padding: 0 auto 25px auto;
   width: 950px;
   margin: auto ;
   background: blue;
@@ -161,8 +160,8 @@ footer {
 .article {
   display: inline-block;
   float: left;
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 210px;
   padding: 10px;
   background: #fff6a1;
   margin: 5px;
