@@ -30,7 +30,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    render "#{@article.article_category.name.downcase}_show" rescue nil
   end
 
   def edit

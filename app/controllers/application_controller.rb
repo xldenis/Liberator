@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   
   end
+  helper :layout
 def redirect_to(options = {}, response_status = {})
   if request.xhr?
     render(:update) {|page| page.redirect_to(options)}

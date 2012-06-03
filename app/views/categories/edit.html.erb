@@ -8,7 +8,10 @@
 </div>
 
 <% end %>
-
+<% begin %>
+<%= render :partial => "categories/edit/#{@category.name.downcase}" %>
+<% rescue %>
 <div class="content">
 	<%= render :partial =>"index",:locals => {:articles => @front_page_articles} %>
 </div>
+<% end %>

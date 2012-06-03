@@ -1,5 +1,5 @@
+<% title(@article.title) %>
 <article>
-TESTING
 <h1><%= @article.title%></h1>
 <p class= "slug" > <%= @article.slug %></p>
 <%=image_tag @article.image_url(:large) if @article.image? %>
