@@ -63,6 +63,7 @@ nav ul {
   width: 950px;
   margin: auto auto 15px auto;
   padding: 0;
+  line-height: 1.3em;
   background:#eee;
   overflow: auto;
   background:#eee;
@@ -75,7 +76,6 @@ nav li {
   float: left;
   margin: 0;
   font-size: 1em;
-  line-height: 1.3em !important;
   text-transform: uppercase;
   background: #eee;
 } a {color: #000;}
@@ -83,7 +83,7 @@ nav li {
 nav li.home {
   font-weight: bold;
   font-size: 1.3em;
-  line-height: 3em;
+  line-height: 3em !important;
   width: 220px;
   text-transform: none !important;
   background: #000;
