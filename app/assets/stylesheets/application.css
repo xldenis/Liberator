@@ -15,6 +15,7 @@ html { background-color: #fff; padding: 20 auto; }
 body {
   font-family: "Crimson Text", Times, "Times New Roman", serif;
   font-size: 18px;
+  width: 960px;
 }
 
 a img { border: none; }
@@ -28,7 +29,7 @@ a:hover {}
 #container {
   margin-left:auto;
   margin-right:auto;
-  width: 960px;
+  width: 950px;
   /*overflow: auto;*/
 }
 
@@ -39,7 +40,7 @@ a:hover {}
 }
 
 footer{
-  width:960px;
+  width:950px;
   margin: 60px auto 60px auto;
   padding: 60px auto;
   font-size: .75em;
@@ -47,7 +48,11 @@ footer{
 }
 
 .status, .profile { font-style: italic; }
- 
+
+.profile {
+	float: right;
+}
+
 .profile a {
   padding: 10px;
   margin: 0 -10px 0 30px;
@@ -55,7 +60,7 @@ footer{
 
 nav ul {
   display: block;
-  width: 960px;
+  width: 950px;
   margin: auto auto 15px auto;
   padding: 0;
   background:#eee;
@@ -96,7 +101,7 @@ nav li a {
   background: #ff9d9d;
 }
 
-.alert-message success {
+.alert-message success, .alert-message notice {
   background: #94ff94
 }
 
@@ -106,11 +111,12 @@ nav li a {
 
 .open {
   display: block !important;
+  cursor: pointer;
 }
 
 #layout-menu {
   display: block;
-  width: 960px;
+  width: 950px;
   max-height: 285px;
   margin: 20px auto 35px auto;
   padding: 0;
@@ -150,7 +156,7 @@ nav li a {
 }
 
 #submit {
-  display: block;
+  display: none;
   width: 960px;
   float: right;
   text-align: center;
@@ -163,24 +169,22 @@ nav li a {
 
 
 
-/* Frontpage layout */
+/* Article & page layout */
 
 .article {
   display: inline-block;
   float: left;
-  width: 220px;
-  height: 200px;
-  padding: 0 0px 0 0px;
-  background: #f9f9f9;
-  border: solid black;
-  border-width: 1px 0 1px 0;
+  width: 230px;
+  height: 230px;
+  padding: 10px;
+  background: #eee;
 }
 
 .featured {
   margin: 0px 5px;
   display: block;
   width: 700px;
-  height: 400px;
+  height: 480px;
 }
 
 .secondary {
@@ -196,8 +200,6 @@ nav li a {
 
 /* Individual article layout */
 
-article { padding: 10px; }
-
 article h1 { 
   font-size: 2em;
 }
@@ -206,16 +208,18 @@ article .slug { font-style: italic; }
 
 .per-article-overlay {
   margin: 0;
+  height: 230px;
   background: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 .25em #888;
 }
 
 .featured .per-article-overlay {
-  margin-top: -20px;
+  height: 460px;
   padding: 15px 30px 30px 30px;
 }
 
 .secondary h2{ font-size: 1.1em;}
+
 .secondary p{ font-size: 1em;}
 
 
@@ -227,6 +231,7 @@ form {
   margin: auto;
   padding: 20px;
   background: #eee;
+  -webkit-transition: all .1 smooth 0;
 }
 
 legend {
@@ -247,9 +252,11 @@ input,select,textarea{
 }
 
 input#user_remember_me { width: 30px; }
+
 textarea{
   border:none;
 }
+
 label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
 .btn {
