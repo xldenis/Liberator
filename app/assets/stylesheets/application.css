@@ -18,7 +18,7 @@ body {
   width: 960px;
   min-height: 100%;
   margin: auto;
-  padding: 25px auto 25px auto;
+  padding: 25px;
   background: #f4e4e4;
 }
 
@@ -170,7 +170,7 @@ footer {
 
 .featured {
   display: block;
-  width: 710px;
+  width: 690px;
   height: 480px;
 }
 
