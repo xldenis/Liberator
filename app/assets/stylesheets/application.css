@@ -196,15 +196,23 @@ article .slug { font-style: italic; }
 .per-article-overlay {
   margin: 0;
   height: 210px;
+  width:100%;
   background: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 .25em #888;
+  -webkit-transition: all 1s ease; 
 }
 
-.featured .per-article-overlay {
+.featurer .per-article-overlay {
   height: 460px;
   padding: 15px 30px 30px 30px;
 }
-
+.overlay-edit {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,1.0);
+  margin:0px;
+  padding:0px;
+}
 .secondary h2 { font-size: 1.1em;}
 
 .secondary p { font-size: 1em;}
