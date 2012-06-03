@@ -33,6 +33,7 @@ nav ul {
   margin: auto auto 25px auto;
   background: blue;
   overflow: auto;
+  border-bottom: 1px solid black;
 }
 
 nav li {
@@ -169,7 +170,7 @@ footer {
 .featured {
   display: block;
   width: 718;
-  height: 480px;
+  height: 460px;
 }
 
 .per-article-overlay {

@@ -22,12 +22,11 @@
     <%= render :partial => "shared/nav" %>
     <%= content_tag :h1, yield(:title) if show_title? %>
     <%= yield %>
-  
-    <div class="profile">
-    	<%= link_to "Staff Login →", new_user_session_path %>
-    </div>
 
-    <footer> Copyright 2011, the LASA/LBJ Liberator. </footer>
+    <footer>
+    	<span>Copyright 2011, the LASA/LBJ Liberator.</span>
+    	<span class="profile"> <%= link_to "Staff Login →", new_user_session_path %> </span>
+    </footer>
     
   </body>
 
