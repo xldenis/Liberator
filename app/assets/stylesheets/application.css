@@ -172,25 +172,21 @@ footer {
   height: 480px;
 }
 
+.per-article-overlay {
+  margin: 0;
+  width: 80%;
+  height: 80%;
+  padding: 10%;
+  background: rgba(255,255,255,0.81);
+}
+
+
 .ui-draggable {
   margin: 15px auto auto 10px;
 }
 
-
-
-
-/* Individual article layout */
-
 article h1 { 
   font-size: 2em;
-}
-
-.per-article-overlay {
-  margin: 0;
-  width: 90%;
-  height: 90%;
-  padding: 10%;
-  background: rgba(255,255,255,0.81);
 }
 
 .article h2 { font-size: 1.1em;}
