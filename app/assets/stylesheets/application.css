@@ -10,7 +10,7 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #eee; }
+html { background-color: #f9f9f9; background: url(http://subtlepatterns.com/patterns/clean_textile.png) repeat; }
 
 body {
   font-family: Georgia, "Crimson Text", Times, "Times New Roman", serif;
