@@ -24,7 +24,7 @@ a img { border: none; }
 
 
 
-/* Container, userbar, navbar */
+/* Container, userbar, navbar, footer */
 
 nav ul {
   display: block;
@@ -60,26 +60,24 @@ nav li.home a { color: #fff; }
 footer {
   display: block;
   width: 960px;
-  margin: 60px auto 60px auto;
-  padding: 60px auto;
+  margin: auto;
+  padding: 25px;
   font-size: .75em;
   text-align: center;
+}
+
+.profile {
+  font-style: italic;
+  float: right;
+}
+
+.profile a {
+  
 }
 
 
 
 /* Logged-in user bar, profile, alerts and such */
-
-.status, .profile { font-style: italic; }
-
-.profile {
-	float: right;
-}
-
-.profile a {
-  padding: 10px;
-  margin: 0 -10px 0 30px;
-}
 
 .alert-message	{
   padding: 10px;
