@@ -13,13 +13,13 @@ This is a manifest file that'll automatically include all the stylesheets availa
 html { background-color: #eee; height: 100%; }
 
 body {
-  font-family: Helvetica, "Crimson Text", Times, "Times New Roman", serif;
+  font-family: Georgia, "Crimson Text", Times, "Times New Roman", serif;
   font-size: 16px;
   width: 960px;
   min-height: 100%;
   margin: auto;
   padding: 25px auto 25px auto;
-  background: #fff;
+  background: #f4e4e4;
 }
 
 a img { border: none; }
