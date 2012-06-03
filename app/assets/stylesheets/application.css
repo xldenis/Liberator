@@ -24,6 +24,7 @@ a img { border: none; }
 /* Container, userbar, navbar */
 
 #container {
+  display: block;
   margin: 20px auto 20px auto;
   width: 960px;
   padding: 0;
@@ -31,21 +32,21 @@ a img { border: none; }
   /*overflow: auto;*/
 }
 
-nav { display: block; width: 960px; margin: 0; padding: 0; }
-
 nav ul {
   display: block;
-  line-height: 2em;
+  width: 950px;
+  margin: auto;
   background: blue;
   overflow: auto;
 }
 
 nav li {
   display: inline-block;
-  float: left;
   text-transform: uppercase;
   background: #eee;
 }
+
+nav li a { padding: 15px; }
 
 nav li.home {
   font-weight: bold;
@@ -56,12 +57,6 @@ nav li.home {
 
 nav li.home a { color: #fff; }
 
-#userbar {
-  margin: 20px auto 20px auto;
-  padding: 20px 0 20px 0;
-  width: 940px;
-}
-
 footer {
   display: block;
   width: 960px;
@@ -70,6 +65,10 @@ footer {
   font-size: .75em;
   text-align: center;
 }
+
+
+
+/* Logged-in user bar, profile, alerts and such */
 
 .status, .profile { font-style: italic; }
 
