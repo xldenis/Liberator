@@ -42,9 +42,9 @@ $ ->
         $(@).data 'id',ui.draggable.data 'id'
         livesave()
       over: (event,ui) ->
-        $(@).animate({'backgroundColor': '#000 !important'})
+        $(@).animate({'backgroundColor': '#000 !important '})
       out: (event,ui) ->
-        $(@).animate({'backgroundColor': '#FFF'})
+        child.animate({'backgroundColor': '#FFF'})
     true
 
   enabledraggable=-> 
