@@ -29,18 +29,17 @@ a img { border: none; }
 
 nav ul {
   display: block;
-  padding: 0 auto 25px auto;
+  padding: 0;
   width: 950px;
-  margin: auto ;
+  margin: auto auto 25px auto;
   background: blue;
   overflow: auto;
 }
 
 nav li {
   display: inline-block;
-  list-style-type: none;
   padding: 20px 10px 20px 10px;
-  margin: 0;
+  margin: 0 -1px 0 -1px;
   text-transform: uppercase;
   background: #eee;
 }
