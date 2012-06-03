@@ -161,13 +161,13 @@ footer {
   width: 228px;
   height: 228px;
   margin: 5px;
-  border: solid black 1px;
+  border: 1px inset darkgray;
 }
 
 .featured {
   display: block;
   width: 708px;
-  height: 460px;
+  height: 465px;
 }
 
 .per-article-overlay {
@@ -177,6 +177,9 @@ footer {
   background: rgba(255,255,255,0.81);
 }
 
+.featured .per-article-overlay {
+  height: 80%;
+}
 
 .ui-draggable {
   margin: 15px auto auto 10px;
