@@ -28,7 +28,7 @@ a:hover {}
 #container {
   margin-left:auto;
   margin-right:auto;
-  width: 950px;
+  width: 960px;
   padding: 0;
   /*overflow: auto;*/
 }
@@ -39,8 +39,9 @@ a:hover {}
   width: 940px;
 }
 
-footer{
-  width:950px;
+footer {
+  display: block;
+  width: 960px;
   margin: 60px auto 60px auto;
   padding: 60px auto;
   font-size: .75em;
@@ -94,7 +95,7 @@ nav li a {
   padding: 10px;
 }
 
-.alert-message  {
+.alert-message	{
   padding: 10px;
   margin: 0 0 15px 0;
   color: #fff;
@@ -123,9 +124,9 @@ nav li a {
   overflow: auto;
   border: 1px solid black;
   display:none;
-  -moz-box-shadow:     0 0 7px #000;
+  -moz-box-shadow:		  0 0 7px #000;
   -webkit-box-shadow:  0 0 7px #000;
-  box-shadow:          0 0 7px #000;
+  box-shadow:			  0 0 7px #000;
 }
 
 #list {
@@ -177,13 +178,13 @@ nav li a {
   width: 230px;
   height: 230px;
   padding: 10px;
-  background: #eee;
+  background: #cbcbcb;
+  margin: 5px;
 }
 
 .featured {
-  margin: 0px 5px;
   display: block;
-  width: 700px;
+  width: 710px;
   height: 480px;
 }
 
@@ -208,7 +209,7 @@ article .slug { font-style: italic; }
 
 .per-article-overlay {
   margin: 0;
-  height: 230px;
+  height: 210px;
   background: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 .25em #888;
 }
@@ -218,9 +219,9 @@ article .slug { font-style: italic; }
   padding: 15px 30px 30px 30px;
 }
 
-.secondary h2{ font-size: 1.1em;}
+.secondary h2 { font-size: 1.1em;}
 
-.secondary p{ font-size: 1em;}
+.secondary p { font-size: 1em;}
 
 
 
