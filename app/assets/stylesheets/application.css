@@ -10,7 +10,7 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #fff; padding: 20 auto; }
+html { background-color: #fff; }
 
 body {
   font-family: Helvetica, "Crimson Text", Times, "Times New Roman", serif;
@@ -18,20 +18,43 @@ body {
 }
 
 a img { border: none; }
-a {}
-a:hover {}
 
 
 
 /* Container, userbar, navbar */
 
 #container {
-  margin-left:auto;
-  margin-right:auto;
+  margin: 20px auto 20px auto;
   width: 960px;
   padding: 0;
+  background: #eee;
   /*overflow: auto;*/
 }
+
+nav { display: block; width: 960px; margin: 0; padding: 0; }
+
+nav ul {
+  display: block;
+  line-height: 2em;
+  background: blue;
+  overflow: auto;
+}
+
+nav li {
+  display: inline-block;
+  float: left;
+  text-transform: uppercase;
+  background: #eee;
+}
+
+nav li.home {
+  font-weight: bold;
+  width: 220px;
+  text-transform: none !important;
+  background: #000;
+}
+
+nav li.home a { color: #fff; }
 
 #userbar {
   margin: 20px auto 20px auto;
@@ -59,39 +82,6 @@ footer {
   margin: 0 -10px 0 30px;
 }
 
-nav ul {
-  display: block;
-  width: 950px;
-  margin: 25px auto 25px auto;
-  line-height: 1.5em;
-  background: #eee;
-  overflow: auto;
-  border: solid black;
-  border-width: 0 0 1px 0;
-}
-
-nav li {
-  display: inline-block;
-  float: left;
-  margin: 0;
-  font-size: 1em;
-  text-transform: uppercase;
-  background: #eee;
-  border: dotted black;
-  border-width: 0 1px 0;
-}
-
-nav li.home {
-  display: block;
-  font-weight: bold;
-  font-size: 1.5em;
-  width: 220px;
-  text-transform: none !important;
-  background: #000;
-}
-
-li.home a { color: #fff; }
-
 .alert-message	{
   padding: 10px;
   margin: 0 0 15px 0;
@@ -99,7 +89,7 @@ li.home a { color: #fff; }
   background: #ff9d9d;
 }
 
-.alert-message success, .alert-message notice {
+.success, .notice {
   background: #94ff94;
 }
 
