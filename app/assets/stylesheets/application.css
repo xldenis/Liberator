@@ -166,6 +166,7 @@ footer {
   padding: 10px;
   background: #fff6a1;
   margin: 5px;
+  border: solid black 1px;
 }
 
 .featured {
