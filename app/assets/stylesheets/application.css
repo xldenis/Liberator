@@ -10,7 +10,7 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #fff; }
+html { background-color: #eee; }
 
 body {
   font-family: Helvetica, "Crimson Text", Times, "Times New Roman", serif;
@@ -19,6 +19,7 @@ body {
   min-height: 100%;
   margin: auto;
   padding: 25px auto 25px auto;
+  background: #fff;
 }
 
 a img { border: none; }
