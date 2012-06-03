@@ -39,7 +39,7 @@ nav ul {
 nav li {
   display: inline-block;
   padding: 20px 10px 20px 10px;
-  margin: 0 -1px 0 -1px;
+  margin: 0 -2px 0 -2px;
   text-transform: uppercase;
   background: #eee;
 }
@@ -161,7 +161,6 @@ footer {
   float: left;
   width: 208px;
   height: 208px;
-  padding: 10px;
   margin: 5px;
   border: solid black 1px;
 }
@@ -173,7 +172,6 @@ footer {
 }
 
 .per-article-overlay {
-  margin: 0;
   width: 80%;
   height: 80%;
   padding: 10%;
