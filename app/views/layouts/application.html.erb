@@ -24,14 +24,14 @@
       <%= render :partial => "shared/nav" %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-
-    </div>
     
-    <div class="profile">
-    	<%= link_to "Staff Login →", new_user_session_path %>
+	    <div class="profile">
+	    	<%= link_to "Staff Login →", new_user_session_path %>
+	    </div>
+	
+	    <footer> Copyright 2011 LBJ Liberator. </footer>
+    
     </div>
-
-    <footer> Copyright 2011 LBJ Liberator. </footer>
 
   </body>
 
