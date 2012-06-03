@@ -62,12 +62,10 @@ footer {
 nav ul {
   display: block;
   width: 950px;
-  margin: auto auto 15px auto;
-  padding: 0;
-  line-height: 1.3em;
-  background:#eee;
+  margin: 25px auto 25px auto;
+  line-height: 1.5em;
+  background: #eee;
   overflow: auto;
-  background:#eee;
   border: solid black;
   border-width: 0 0 1px 0;
 }
@@ -79,21 +77,20 @@ nav li {
   font-size: 1em;
   text-transform: uppercase;
   background: #eee;
-} a {color: #000;}
+  border: dotted black;
+  border-width: 0 1px 0;
+}
 
 nav li.home {
+  display: block;
   font-weight: bold;
-  font-size: 1.3em;
-  line-height: 3em !important;
+  font-size: 1.5em;
   width: 220px;
   text-transform: none !important;
   background: #000;
-} li.home a {color: #fff;}
-
-nav li a {
-  display: block;
-  padding: 10px;
 }
+
+li.home a { color: #fff; }
 
 .alert-message	{
   padding: 10px;
@@ -103,7 +100,7 @@ nav li a {
 }
 
 .alert-message success, .alert-message notice {
-  background: #94ff94
+  background: #94ff94;
 }
 
 
