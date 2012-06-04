@@ -129,7 +129,7 @@ footer {
   margin: 0;
   cursor: move;
   overflow: hidden;
-
+  text-overflow: ellipsis;
   color: #fff;
   border: white 1px solid;
   background: #303030;
