@@ -7,15 +7,13 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 */
 
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic);
-
 /* HTML, body, link, paragraph, and other basics */
 
-html { background-color: #f9f9f9; background: url(http://subtlepatterns.com/patterns/clean_textile.png) repeat; }
+html { background: #f9f9f9 url("http://subtlepatterns.com/patterns/clean_textile.png") repeat; }
 
 body {
   font-family: Helvetica;
-  font-size: 14px;
+  font-size: 12px;
   width: 960px;
   margin: auto;
   background: #f4e4e4;
@@ -34,7 +32,7 @@ nav ul {
   margin: auto;
   overflow: auto;
   border-bottom: 1px solid black;
-  background: #f0f0f0;
+  background: #f0f0f0 url('http://subtlepatterns.com/patterns/dark_wall.png') repeat;
 }
 
 nav li {
@@ -71,8 +69,8 @@ footer {
   float: right;
 }
 
-.profile a {
-  
+.userbar {
+	margin: 15px auto;
 }
 
 
@@ -94,7 +92,7 @@ footer {
 
 /* Editor's layout-edit menu */
 
-.open {
+.status {
   display: block !important;
   cursor: pointer;
 }
