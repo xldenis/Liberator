@@ -92,7 +92,7 @@ footer {
 
 /* Editor's layout-edit menu */
 
-.open {
+.status {
   display: block !important;
   cursor: pointer;
 }
