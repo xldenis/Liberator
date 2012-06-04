@@ -1,1 +1,5 @@
+<% begin %>
+<%= render :partial => "categories/show/#{@category.name.downcase}" %>
+<% rescue %>
 <%= render :partial =>"index",:locals => {:articles => @articles} %>
+<% end %>

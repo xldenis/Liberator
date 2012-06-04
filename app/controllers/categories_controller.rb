@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @articles = @category.front_to_articles
-    render "#{@category.name.downcase }_show" rescue nil
   end
   def edit 
     @category = Category.find(params[:id])
@@ -24,7 +23,6 @@ class CategoriesController < ApplicationController
     else
     @articles = @category.articles.to_a
     end
-    render "#{@category.name.downcase}_edit" rescue nil
   end
   def update 
     @category = Category.find(params[:id])

@@ -42,9 +42,9 @@ $ ->
         $(@).data 'id',ui.draggable.data 'id'
         livesave()
       over: (event,ui) ->
-        $(@).animate({'backgroundColor': '#000 !important '})
+        $(@).children().first().toggleClass 'overlay-edit'
       out: (event,ui) ->
-        child.animate({'backgroundColor': '#FFF'})
+        $(@).children().first().toggleClass 'overlay-edit'
     true
 
   enabledraggable=-> 

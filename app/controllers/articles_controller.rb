@@ -10,9 +10,10 @@ class ArticlesController < ApplicationController
     if @article.update_attributes(temp_params) && @article.save
       @article.categories=[Category.find(params[:article][:category_ids])]
       @article.save
+      
      flash[:success]= "Article successfully created."
       respond_to do |format|
-       format.html{if params[:article][:image]||params[:article][:remote_image_url] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
+       format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
        format.js{redirect_to @article}
       end
     else
@@ -30,7 +31,6 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    render "#{@article.article_category.name.downcase}_show" rescue nil
   end
 
   def edit
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
    if @article.update_attributes!(temp_params)
       flash[:notice] = "Article Successfully Updated."
       respond_to do |format|
-        format.html{if params[:article][:image]||params[:article][:remote_image_url] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
+        format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
         format.js{}
       end
     else

@@ -13,9 +13,10 @@
                        <%= link_to "Keep reading →", article %>
 </div>
 <% else %>
-               
+              <div class="per-article-overlay"> 
                <h2>Placeholder Title</h2>
                <p>Dummy text.</p>
+              </div>
        <% end %>
        </div>
 
@@ -26,8 +27,10 @@
                <div <% if index==0 %>
                        class="article featured" <% else %>
                        class="article secondary" <% end %>>
-                       <h2>Placeholder Title</h2>
-                       <p>Dummy text.</p>
+                       <div class="per-article-overlay">
+                        <h2>Placeholder Title</h2>
+                        <p>Dummy text.</p>
+                       </div>
                </div>
        <% end %>
        <% end %>

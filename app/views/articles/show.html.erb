@@ -1,6 +1,11 @@
+<% title(@article.title) %>
+<% begin %>
+<%= render :partial=>"articles/show/#{@article.article_category.name.downcase}" %>
+<% rescue %>
 <article>
 <h1><%= @article.title%></h1>
 <p class= "slug" > <%= @article.slug %></p>
 <%=image_tag @article.image_url(:large) if @article.image? %>
 <%= markdown @article.content %>
 </article>
+<% end %>
