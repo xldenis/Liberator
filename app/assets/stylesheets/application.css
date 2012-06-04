@@ -43,18 +43,19 @@ nav li {
   text-transform: uppercase;
 }
 
-nav li a { color: #000; padding: 20px; }
+nav li a { display: block; color: #000; padding: 20px; }
 
-nav li a:hover { color: #FFF; background: #000; }
+nav li a:hover { color: #f3f3f3; background: #000; }
 
 nav li.home {
   font-weight: bold;
+  padding: 20px;
   width: 220px;
   text-transform: none !important;
   background: #000;
 }
 
-nav li.home a { color: #fff; }
+nav li.home a { display: block; width: 180px; color: #fff; }
 
 footer {
   display: block;
@@ -161,7 +162,7 @@ footer {
   width: 228px;
   height: 228px;
   margin: 5px;
-  border: 1px inset darkgray;
+  border: 1px dotted #d8d8d8;
 }
 
 .featured {
@@ -178,7 +179,7 @@ footer {
 }
 
 .featured .per-article-overlay {
-  height: 80%;
+  height: 85%;
 }
 
 .ui-draggable {
