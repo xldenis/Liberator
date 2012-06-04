@@ -179,6 +179,7 @@ footer {
 }
 
 .featured .per-article-overlay {
+  width: 85%;
   height: 85%;
 }
 
