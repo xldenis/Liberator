@@ -9,10 +9,12 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
+@import url(http://fonts.googleapis.com/css?family=Tinos:400italic,700,400,700italic);
+
 html { background: #ffffff url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
 
 body {
-  font-family: Helvetica;
+  font-family: 'Tinos';
   font-size: 14px;
   width: 960px;
   margin: auto;
@@ -28,16 +30,17 @@ a img { border: none; }
 nav ul {
   display: block;
   width: 960px;
-  margin: auto auto 20px auto;
+  margin: auto auto 25px auto;
+  padding: 0;
   overflow: auto;
   border-bottom: 1px solid black;
   background: #8a8a8a;
-  box-shadow: 0 16px 16px -8px #232323;
+  box-shadow: 0 10px 10px -15px #4f4f4f;
 }
 
 nav li {
   display: inline-block;
-  margin: 20px -2px 0 -2px;
+  margin: 0 -2px 0 -2px;
   text-transform: uppercase;
   background: #eee;
 }
