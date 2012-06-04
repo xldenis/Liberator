@@ -9,14 +9,14 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-html { background: #f9f9f9 url("http://subtlepatterns.com/patterns/clean_textile.png") repeat; }
+html { background-color: #ffffff; background: url(http://subtlepatterns.com/patterns/clean_textile.png) repeat; }
 
 body {
-  font-family: Helvetica;
-  font-size: 12px;
+  font-family: "Archer", Helvetica;
+  font-size: 14px;
   width: 960px;
   margin: auto;
-  background: #f4e4e4;
+  background: #f8f8f8;
 }
 
 a img { border: none; }
@@ -32,7 +32,7 @@ nav ul {
   margin: auto;
   overflow: auto;
   border-bottom: 1px solid black;
-  background: #f0f0f0 url('http://subtlepatterns.com/patterns/dark_wall.png') repeat;
+  background: #f0f0f0;
 }
 
 nav li {
@@ -69,8 +69,8 @@ footer {
   float: right;
 }
 
-.userbar {
-	margin: 15px auto;
+.profile a {
+  
 }
 
 
@@ -92,7 +92,7 @@ footer {
 
 /* Editor's layout-edit menu */
 
-.status {
+.open {
   display: block !important;
   cursor: pointer;
 }
