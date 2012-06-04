@@ -99,7 +99,7 @@ footer {
 
 .status, .open {
   cursor: pointer;
-}
+} .open { display: block !important; }
 
 #layout-menu {
   display: block;
