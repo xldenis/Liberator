@@ -49,7 +49,6 @@ nav li a:hover { color: #f3f3f3; background: #000; }
 
 nav li.home {
   font-weight: bold;
-  padding: 20px;
   width: 220px;
   text-transform: none !important;
   background: #000;
