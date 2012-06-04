@@ -15,9 +15,9 @@ html { background-color: #f9f9f9; background: url(http://subtlepatterns.com/patt
 
 body {
   font-family: Helvetica;
-  font-size: 16px;
+  font-size: 14px;
   width: 960px;
-  margin: 25px auto 25px auto;
+  margin: auto;
   background: #f4e4e4;
 }
 
@@ -34,7 +34,7 @@ nav ul {
   margin: auto;
   overflow: auto;
   border-bottom: 1px solid black;
-  background: #f6f6f6;
+  background: #f0f0f0;
 }
 
 nav li {
@@ -190,12 +190,12 @@ footer {
 }
 
 .article h2 {
-	font-size: 1em;
-	padding: 20px;
+	font-size: 1.5em;
+	padding: 30px;
 }
 
 .article p {
-	padding: 20px;
+	padding: 0 30px;
 }
 
 
