@@ -27,12 +27,12 @@ a img { border: none; }
 
 nav ul {
   display: block;
-  padding: 10px 0;
   width: 960px;
-  margin: auto;
+  margin: auto auto 20px auto;
   overflow: auto;
   border-bottom: 1px solid black;
   background: #8a8a8a;
+  box-shadow: 0 16px 16px -8px #232323;
 }
 
 nav li {
@@ -128,6 +128,7 @@ footer {
   padding: 15px;
   margin: 0;
   cursor: move;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #fff;
