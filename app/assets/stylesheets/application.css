@@ -50,7 +50,6 @@ nav li a:hover { color: #f3f3f3; background: #000; }
 
 nav li.home {
   font-weight: bold;
-  padding: 20px;
   width: 220px;
   text-transform: none !important;
   background: #000;
@@ -141,6 +140,10 @@ footer {
   background: -webkit-linear-gradient(rgba(39,39,39,1) 0%, #000000 100%);
 }
 
+.ui-draggable {
+  margin: 15px auto auto 10px;
+}
+
 #submit {
   display: none;
   width: 960px;
@@ -175,17 +178,13 @@ footer {
 .per-article-overlay {
   width: 90%;
   height: 90%;
-  padding: 5%;
+  padding: 2% 5% 2% 5%;
   background: rgba(255,255,255,0.81);
 }
 
 .featured .per-article-overlay {
-  width: 85%;
+  width: 90%;
   height: 85%;
-}
-
-.ui-draggable {
-  margin: 15px auto auto 10px;
 }
 
 article h1 { 
