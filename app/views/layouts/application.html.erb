@@ -14,24 +14,19 @@
   
     <%= render :partial => "shared/profile" %>
     <%= yield(:edit_menu)%>
-    
-    <div id="container">
-     
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :class => "alert-message #{name}" %>
-      <% end %>
-
-      <%= render :partial => "shared/nav" %>
-      <%= yield %>
-    
-	    <div class="profile">
-	    	<%= link_to "Staff Login →", new_user_session_path %>
-	    </div>
+         
+	<% flash.each do |name, msg| %>
+	<%= content_tag :div, msg, :class => "alert-message #{name}" %>
+	<% end %>
 	
-	    <footer> Copyright 2011, the LASA/LBJ Liberator. </footer>
-    
-    </div>
-
+	<%= render :partial => "shared/nav" %>
+	<%= yield %>
+	
+	<footer>
+		<span>Copyright 2011, the LASA/LBJ Liberator.</span>
+		<span class="profile"> <%= link_to "Staff Login →", new_user_session_path %> </span>
+	</footer>
+	    
   </body>
 
 </html>
