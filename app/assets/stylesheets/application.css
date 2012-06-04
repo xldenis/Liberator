@@ -163,7 +163,7 @@ footer {
   display: inline-block;
   float: left;
   width: 240px;
-  height: 240px;
+  height: 230px;
   margin: 0;
 }
 
@@ -174,10 +174,10 @@ footer {
 }
 
 .per-article-overlay {
-  margin: -18px auto;
+  margin: -19px auto;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,0.81);
+  background: rgba(255,255,255,0.7);
 }
 
 .overlay-edit {
