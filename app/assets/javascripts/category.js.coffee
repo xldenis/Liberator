@@ -38,6 +38,7 @@ $ ->
     article = $('.article') 
     article.droppable accept: "#list >li",
       drop: (event, ui) ->
+        $(@).data 'id',ui.draggable.data 'id'
         livesave()
       over: (event,ui) ->
         $(@).children().first().toggleClass 'overlay-edit'
