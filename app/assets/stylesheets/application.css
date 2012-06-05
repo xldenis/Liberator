@@ -252,10 +252,11 @@ form ul {
 
 li {
   display: block;
+  padding: 0;
+  width: 670px;
 }
 
 input, select, textarea {
-  width: 670px;
   padding: 10px;
   font-size: 1.5em;
 }
@@ -274,6 +275,11 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
   color: #fff;
   background: #000;
   border: none;
+}
+
+form .box {
+	width: 230px;
+	float: right;
 }
 
 form footer { width: 860px; }
