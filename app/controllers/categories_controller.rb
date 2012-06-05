@@ -19,9 +19,9 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
       @front_page_articles = @category.front_to_articles
     if @category.front_page_articles
-    @articles = @category.articles.to_a - @category.front_to_articles
+    @articles = @category.articles.where(:published=> true).to_a - @category.front_to_articles
     else
-    @articles = @category.articles.to_a
+    @articles = @category.articles.where(:published => true).to_a
     end
   end
   def update 
@@ -29,9 +29,9 @@ class CategoriesController < ApplicationController
     if (@category.front_page_articles=params[:front_page_articles]) && @category.save
       flash[:success] = "Category successfully updated."
       if @category.front_page_articles
-        @articles = @category.articles.to_a - @category.front_to_articles
+        @articles = @category.articles.where(:published => true).to_a - @category.front_to_articles
       else
-        @articles = @category.articles.to_a
+        @articles = @category.articles.where(:published => true).to_a
       end
       @front_page_articles = @category.front_to_articles
       respond_to do |format| 
