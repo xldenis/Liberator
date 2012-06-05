@@ -178,7 +178,7 @@ footer {
   display: inline-block;
   float: left;
   width: 240px;
-  height: 230px;
+  height: 240px;
   margin: 0;
   background: rgba(255,255,255,0)
 }
@@ -186,7 +186,7 @@ footer {
 .featured {
   display: block;
   width: 720px;
-  height: 230px;
+  height: 240px;
 }
 
 .per-article-overlay {
