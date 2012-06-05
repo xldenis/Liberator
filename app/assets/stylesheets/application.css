@@ -9,10 +9,12 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
+@import url(http://fonts.googleapis.com/css?family=Tinos:400italic,700,400,700italic);
+
 html { background: #ffffff url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
 
 body {
-  font-family: Helvetica;
+  font-family: 'Tinos';
   font-size: 14px;
   width: 960px;
   margin: auto;
@@ -23,21 +25,22 @@ a img { border: none; }
 
 
 
-/* Container, userbar, navbar, footer */
+/* Container, navbar, footer */
 
 nav ul {
   display: block;
-  padding: 10px 0;
   width: 960px;
-  margin: auto;
+  margin: auto auto 25px auto;
+  padding: 0;
   overflow: auto;
   border-bottom: 1px solid black;
   background: #8a8a8a;
+  box-shadow: 0 10px 10px -15px #4f4f4f;
 }
 
 nav li {
   display: inline-block;
-  margin: 20px -2px 0 -2px;
+  margin: 0 -2px 0 -2px;
   text-transform: uppercase;
   background: #eee;
 }
@@ -64,19 +67,23 @@ footer {
   text-align: center;
 }
 
+
+
+/* Logged-in user bar, profile, alerts and such */
+
+#userbar {
+	font-size: 1em;
+	margin: 25px auto 25px auto;
+}
+
 .profile {
   font-style: italic;
   float: right;
 }
 
-#userbar {
-	font-size: 1.5em;
-	margin: 25px auto 25px auto;
+.profile a {
+	padding: 10px;
 }
-
-
-
-/* Logged-in user bar, profile, alerts and such */
 
 .alert-message	{
   padding: 10px;
@@ -94,16 +101,15 @@ footer {
 /* Editor's layout-edit menu */
 
 .status, .open {
-  display: block !important;
   cursor: pointer;
-}
+} .open { display: block !important; }
 
 #layout-menu {
   display: block;
-  width: 950px;
+  width: 960px;
   max-height: 260px;
   margin: 0 auto 20px auto;
-  padding: 0;
+  padding: 1px;
   overflow: auto;
   display:none;
   box-shadow: 0px 0px 15px black;
@@ -125,8 +131,9 @@ footer {
   padding: 15px;
   margin: 0;
   cursor: move;
+  white-space: nowrap;
   overflow: hidden;
-
+  text-overflow: ellipsis;
   color: #fff;
   border: white 1px solid;
   background: #303030;
