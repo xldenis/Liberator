@@ -1,6 +1,6 @@
 <% if articles %>
  	<% articles.each_with_index do |article,index| %>
-       <div <% if index==0 %>
+       <div <% if index==0 || index==1 %>
                class="article featured" <% else %>
                class="article secondary" <% end %>
                data-id="<%= if article then article.id else end %>"
@@ -22,8 +22,8 @@
 <% end %>
   
 <% else %>
-       <% 9.times do |index|%>
-               <div <% if index==0 %>
+       <% 19.times do |index|%>
+               <div <% if index==0 || index==1 %>
                        class="article featured" <% else %>
                        class="article secondary" <% end %>>
                        <div class="per-article-overlay">

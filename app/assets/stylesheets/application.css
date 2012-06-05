@@ -80,7 +80,7 @@ footer {
 /* Logged-in user bar, profile, alerts and such */
 
 #userbar {
-	line-height: 1.6.em;
+	line-height: 1.6em;
 	margin: 20px auto;
 }
 
@@ -90,7 +90,15 @@ footer {
 }
 
 .profile a {
-	padding: 10px;
+	color: #000;
+	padding: 15px;
+	margin: -2px;
+	text-decoration: none;
+}
+
+.profile a:hover {
+	color: #fff;
+	background: #000;
 }
 
 .alert-message	{
@@ -257,6 +265,7 @@ input, select, textarea {
   padding: 10px;
   font-size: 1.5em;
   border: none;
+  background: #eee;
 }
 
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
