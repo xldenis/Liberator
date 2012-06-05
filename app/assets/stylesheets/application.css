@@ -249,18 +249,20 @@ form ul {
 	padding: 0;
 }
 
-li {
+form li {
   display: block;
   padding: 0;
   width: 670px;
 }
 
 input, select, textarea {
+  width: 650px;
   padding: 10px;
   font-size: 1.5em;
+  border: none;
 }
 
-input#user_remember_me { width: 30px; }
+input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
 
 textarea{
   border:none;
