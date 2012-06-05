@@ -200,11 +200,7 @@ footer {
 }
 
 .overlay-edit {
-  height: 100%;
-  width: 100%;
-  background: #4e4e4e;
-  margin: 0px;
-  padding: 0px;
+  background: #e0e0e0;
 }
 
 .article h2 {
