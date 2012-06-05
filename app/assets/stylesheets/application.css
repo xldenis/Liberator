@@ -220,7 +220,6 @@ footer {
 
 .article p {
 	padding: 0 30px;
-	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
