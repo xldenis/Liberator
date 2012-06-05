@@ -186,9 +186,6 @@ footer {
   height: 240px;
   margin: 0;
   background: rgba(255,255,255,0);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .featured {
@@ -223,6 +220,8 @@ footer {
 
 .article p {
 	padding: 0 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 article {
