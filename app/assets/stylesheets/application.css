@@ -11,7 +11,7 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 @import url(http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic|Fanwood+Text:400,400italic);
 
-html { background: #fbfbf4 url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
+html { background: #fbfbf4 url('http://subtlepatterns.com/patterns/natural_paper.png') repeat; }
 
 body {
   font-family: "Fanwood Text", Georgia, "Times New Roman", serif;
@@ -20,6 +20,8 @@ body {
   margin: auto;
 }
 
+nav ul, .article h2, #userbar, article h1 { font-family: "Karla", "Futura", sans-serif; }
+
 a img { border: none; }
 
 
@@ -27,7 +29,6 @@ a img { border: none; }
 /* Container, navbar, footer */
 
 nav ul {
-  font-family: "Karla", "Futura", sans-serif;
   display: block;
   width: 960px;
   margin: auto auto 25px auto;
@@ -155,7 +156,7 @@ footer {
 
 
 
-/* Article & page layout */
+/* Article tile & article page layout */
 
 .article {
   display: inline-block;
@@ -187,13 +188,21 @@ footer {
 }
 
 .article h2 {
-	font-family: "Karla", Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
 	padding: 30px 30px 0 30px;
 }
 
 .article p {
 	padding: 0 30px;
+}
+
+article {
+	width: 700px;
+}
+
+article h1 {
+	font-size: 2.5em;
+	font-style: italic;
 }
 
 
