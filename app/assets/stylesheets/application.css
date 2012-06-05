@@ -242,29 +242,7 @@ article img {
 
 
 
-/* Sign-in form */
-
-form {
-  width: 920px;
-  margin: auto;
-  padding: 20px;
-  background: rgba(255,255,255,0.7);
-}
-
-legend {
-  font-size: 2em;
-}
-
-form ul {
-	width: 710px;
-	padding: 0;
-}
-
-form li {
-  display: block;
-  padding: 0;
-  width: 670px;
-}
+/* General form styling */
 
 input, select, textarea {
   width: 650px;
@@ -273,6 +251,32 @@ input, select, textarea {
   border: none;
   margin: none;
   background: #d3d3d3;
+}
+
+
+
+/* Sign-in form */
+
+#new-user form {
+  width: 920px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.7);
+}
+
+#new-user legend {
+  font-size: 2em;
+}
+
+#new-user form ul {
+	width: 710px;
+	padding: 0;
+}
+
+#new-user form li {
+  display: block;
+  padding: 0;
+  width: 670px;
 }
 
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
