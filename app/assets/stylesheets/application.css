@@ -11,14 +11,13 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 @import url(http://fonts.googleapis.com/css?family=Tinos:400italic,700,400,700italic);
 
-html { background: #ffffff url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
+html { background: #fbfbf4 url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
 
 body {
   font-family: 'Tinos';
   font-size: 14px;
   width: 960px;
   margin: auto;
-  background: #f8f8f8;
 }
 
 a img { border: none; }
@@ -35,14 +34,13 @@ nav ul {
   overflow: auto;
   border-bottom: 1px solid black;
   background: #8a8a8a;
-  box-shadow: 0 10px 10px -15px #4f4f4f;
+  box-shadow: 0px 8px 8px -5px #4f4f4f;
 }
 
 nav li {
   display: inline-block;
   margin: 0 -2px 0 -2px;
   text-transform: uppercase;
-  background: #eee;
 }
 
 nav li a { display: block; color: #000; padding: 20px; }
@@ -63,7 +61,6 @@ footer {
   width: 960px;
   margin: auto;
   padding: 25px;
-  font-size: .75em;
   text-align: center;
 }
 
@@ -89,11 +86,11 @@ footer {
   padding: 10px;
   margin: 0 0 15px 0;
   color: #fff;
-  background: #ff9d9d;
+  background: #efc4c4;
 }
 
 .success, .notice {
-  background: #94ff94;
+  background: #c7ffc7;
 }
 
 
@@ -111,7 +108,7 @@ footer {
   margin: 0 auto 20px auto;
   padding: 1px;
   overflow: auto;
-  display:none;
+  display: none;
   box-shadow: 0px 0px 15px black;
 }
 
@@ -170,7 +167,7 @@ footer {
 .featured {
   display: block;
   width: 720px;
-  height: 460px;
+  height: 230px;
 }
 
 .per-article-overlay {
