@@ -20,7 +20,7 @@ body {
   margin: auto;
 }
 
-nav ul, .article h2, #userbar, article h1, form { font-family: "Karla", "Futura", sans-serif; }
+nav ul, .article h2, #userbar, article h1, form, input { font-family: "Karla", "Futura", sans-serif; }
 
 a { color: #0783f8; }
 
@@ -68,11 +68,13 @@ nav li.home a {
 
 footer {
   display: block;
-  width: 960px;
+  width: 920px;
   margin: auto;
-  padding: 25px;
-  text-align: center;
+  padding: 20px;
+  text-align: right;
 }
+
+
 
 
 
@@ -253,9 +255,9 @@ li {
 }
 
 input, select, textarea {
-  width: 575px;
+  width: 670px;
   padding: 10px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 input#user_remember_me { width: 30px; }
@@ -274,4 +276,7 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
   background: #000;
   border: none;
 }
+
+form footer { width: 860px; }
+
 
