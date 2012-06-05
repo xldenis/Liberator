@@ -45,7 +45,7 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin: -3px -2px 0 -2px;
+  margin: -.4em -2px;
   text-transform: uppercase;
 }
 
