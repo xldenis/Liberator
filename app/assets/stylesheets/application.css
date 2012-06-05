@@ -68,8 +68,8 @@ nav li.home a {
 
 footer {
   display: block;
-  width: 920px;
-  margin: 20px auto 20px auto;
+  width: 960px;
+  margin: 40px auto 20px auto;
   clear: left;
 }
 
@@ -263,7 +263,7 @@ form li {
 
 /* Sign-in form */
 
-#new_user form {
+form#new_user {
   width: 920px;
   margin: auto;
   padding: 20px;
@@ -287,9 +287,6 @@ form li {
 
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
 
-textarea{
-  border:none;
-}
 
 label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
@@ -300,10 +297,4 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
   background: #000;
   border: none;
 }
-
-form .box {
-	width: 230px;
-	float: right;
-}
-
 
