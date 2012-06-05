@@ -35,7 +35,7 @@ a img { border: none; }
 nav ul {
   display: block;
   width: 960px;
-  margin: auto auto 25px auto;
+  margin: 20px auto 20px auto;
   padding: 0;
   overflow: auto;
   border: 1px solid black;
@@ -81,7 +81,7 @@ footer {
 
 #userbar {
 	line-height: 1.6.em;
-	margin: 25px auto 25px auto;
+	margin: 20px auto;
 }
 
 .profile {
