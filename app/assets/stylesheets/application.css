@@ -56,7 +56,13 @@ nav li.home {
   background: #000;
 }
 
-nav li.home a { display: block; width: 180px; color: #fff; }
+nav li.home a {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	display: block;
+	width: 180px;
+	color: #fff;
+}
 
 footer {
   display: block;
@@ -164,6 +170,7 @@ footer {
   width: 240px;
   height: 230px;
   margin: 0;
+  background: rgba(251,243,232,0.2)
 }
 
 .featured {
