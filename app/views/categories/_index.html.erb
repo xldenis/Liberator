@@ -9,7 +9,8 @@
                       <div class="per-article-overlay">
                        <h2><%= link_to article.title, article %></h2>
                        <p><%= article.slug %></p>
-                       <% if index==0 %><p><%= truncate(article.content,:length=>450,:separator=>'.') %></p><% end %>
+                       <% debugger %>
+                       <p><%= article.content.split(/\n\n/).first%></p>
 </div>
 <% else %>
               <div class="per-article-overlay"> 
