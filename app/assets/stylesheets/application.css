@@ -259,6 +259,10 @@ form li {
 	list-style: none;
 }
 
+form ul {
+	margin: 0;
+}
+
 
 
 /* Sign-in form */
