@@ -185,8 +185,6 @@ footer {
   width: 240px;
   height: 240px;
   margin: 0;
-  overflow: scroll;
-  text-overflow: ellipsis;
   background: rgba(255,255,255,0);
 }
 
@@ -222,6 +220,7 @@ footer {
 
 .article p {
 	padding: 0 30px;
+	max-height: 100px;
 }
 
 article {
