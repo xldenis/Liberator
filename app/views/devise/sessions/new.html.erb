@@ -1,27 +1,28 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   
 	<legend>Log In &rarr;</legend>
-  <ul>
-  	<li>
-  		<span class="hide"> <%= f.label :email %> </span>
-  		<%= f.text_field :email, :placeholder => "Email" %>
-  	</li>
-  	<li>
-		<span class="hide"> <%= f.label :password %> </span>
-		<%= f.password_field :password, :placeholder => "Password" %>
-	</li>
 
-  	<% if devise_mapping.rememberable? %>
-  		<li>
-    		<%= f.check_box :remember_me %>
-    		<%= f.label :remember_me %>
-    	</li>
- 	<% end %>
+	<ul>
+	  	<li>
+	  		<span class="hide"> <%= f.label :email %> </span>
+	  		<%= f.text_field :email, :placeholder => "Email" %>
+	  	</li>
+	  	<li>
+			<span class="hide"> <%= f.label :password %> </span>
+			<%= f.password_field :password, :placeholder => "Password" %>
+		</li>
 
-  	<%= f.submit "Log In",:class=>"btn primary" %>
+	  	<% if devise_mapping.rememberable? %>
+	  		<li>
+	    		<%= f.check_box :remember_me %>
+	    		<%= f.label :remember_me %>
+	    	</li>
+	 	<% end %>
+
+	 	<%= f.submit "Log In",:class=>"btn primary" %>
   	
-  </ul>
+	 </ul>
 
 <% end %>
 
-<div class="box"><%= render :partial => "devise/shared/links" %></div>
+<ul class="box"><%= render :partial => "devise/shared/links" %></div>
