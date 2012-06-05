@@ -194,7 +194,8 @@ footer {
 .featured {
   display: block;
   width: 720px;
-  height: 241px;
+  height: 240px;
+  margin: -2px auto;
 }
 
 .featured h1 {
