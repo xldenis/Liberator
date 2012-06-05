@@ -271,7 +271,8 @@ input, select, textarea {
   padding: 10px;
   font-size: 1.5em;
   border: none;
-  background: #eee;
+  margin: none;
+  background: #d3d3d3;
 }
 
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
@@ -294,7 +295,5 @@ form .box {
 	width: 230px;
 	float: right;
 }
-
-form footer { width: 860px; }
 
 
