@@ -185,7 +185,7 @@ footer {
   width: 240px;
   height: 240px;
   margin: 0;
-  overflow: hidden;
+  overflow: scroll;
   text-overflow: ellipsis;
   background: rgba(255,255,255,0);
 }
