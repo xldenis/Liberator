@@ -222,6 +222,8 @@ footer {
 .article p {
 	padding: 0 30px;
 	max-height: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 article {
