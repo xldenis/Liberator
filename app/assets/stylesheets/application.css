@@ -103,10 +103,11 @@ footer {
   padding: 10px;
   margin: 15px 0 15px 0;
   background: #efc4c4;
+  border: 1px solid #8a8a8a;
 }
 
 .success, .notice {
-  background: #c7ffc7;
+  background: #baffba;
 }
 
 
