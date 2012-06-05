@@ -14,7 +14,7 @@ This is a manifest file that'll automatically include all the stylesheets availa
 html { background: #fbfbf4 url('http://subtlepatterns.com/patterns/natural_paper.png') repeat; }
 
 body {
-  font-family: "Bitter", Georgia, "Times New Roman", serif;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 16px;
   width: 960px;
   margin: auto;
@@ -187,6 +187,10 @@ footer {
   display: block;
   width: 720px;
   height: 240px;
+}
+
+.secondary h2 {
+	font-size: 1.3em;
 }
 
 .per-article-overlay {
