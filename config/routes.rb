@@ -10,6 +10,7 @@ Liberator::Application.routes.draw do
    resources :token_authentications, :only => [:create, :destroy]
    resources :users, :controller => "user"
    match 'articles/crop_update/:id' => 'articles#crop_update'
+   get 'articles/publish/:id' => 'articles#publish', :as => :publish
    resources :articles do
     get 'crop', :on => :member
   end

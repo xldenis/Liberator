@@ -6,7 +6,8 @@
 
   <td><% if can? :update, article%><%=link_to "Edit",edit_article_path(article)%></td>
 <% end %>
-  <td><% if can? :delete, article %><%= link_to "Delete",article,:method => :delete,:remote => true%><% end %></td>        
+  <td><% if can? :delete, article %><%= link_to "Delete",article,:method => :delete,:remote => true%><% end %></td>
+  <td><% if can? :publish, article %><%= link_to (if article.published then "Unpublish" else "Publish" end), publish_path(article),:class=>"publish"%> <% end %> </td>
 </tr>
 <% end %>
 

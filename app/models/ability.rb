@@ -5,12 +5,14 @@ class Ability
     user ||= User.new
     if user.role == "admin"
       can :manage, :all
+      can :publish, Article
     elsif user.role =="reporter"
       can :create, Article
       can :delete, Article, :user_id => user.id
       can :update, Article, :user_id => user.id
       can :read, Article
       can :read, Category
+      cannot :publish, Article
     else
       can :read, Article
       cannot :index, Article

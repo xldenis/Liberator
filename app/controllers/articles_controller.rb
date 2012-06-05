@@ -82,4 +82,15 @@ class ArticlesController < ApplicationController
     @article.save
     redirect_to @article
   end
+  def publish
+    if can? :publish, Article 
+      @article = Article.find(params[:id])
+      @article.published = !@article.published
+      if @article.save
+        render :nothing => true
+      else
+        render :nothing => true
+      end
+    end
+  end
 end
