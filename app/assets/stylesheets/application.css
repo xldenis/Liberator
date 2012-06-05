@@ -71,6 +71,7 @@ footer {
   width: 920px;
   margin: auto;
   padding: 20px;
+  clear: left;
 }
 
 
@@ -193,7 +194,7 @@ footer {
 .featured {
   display: block;
   width: 720px;
-  height: 240px;
+  height: 241px;
 }
 
 .featured h1 {
