@@ -22,6 +22,10 @@ body {
 
 nav ul, .article h2, #userbar, article h1 { font-family: "Karla", "Futura", sans-serif; }
 
+a { color: #4a9eed; }
+
+a:hover { color: #000000; }
+
 a img { border: none; }
 
 
@@ -106,7 +110,14 @@ footer {
 
 .status, .open {
   cursor: pointer;
-} .open { display: block !important; }
+}
+
+.status {
+	font-size: 1.6em;
+	line-height: 1.6em;
+}
+
+.open { display: block !important; }
 
 #layout-menu {
   display: block;
