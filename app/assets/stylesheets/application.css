@@ -9,13 +9,13 @@ This is a manifest file that'll automatically include all the stylesheets availa
 
 /* HTML, body, link, paragraph, and other basics */
 
-@import url(http://fonts.googleapis.com/css?family=Tinos:400italic,700,400,700italic);
+@import url(http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic|Fanwood+Text:400,400italic);
 
 html { background: #fbfbf4 url('http://subtlepatterns.com/patterns/clean_textile.png') repeat; }
 
 body {
-  font-family: 'Tinos';
-  font-size: 14px;
+  font-family: "Fanwood Text", Georgia, "Times New Roman", serif;
+  font-size: 16px;
   width: 960px;
   margin: auto;
 }
@@ -27,6 +27,7 @@ a img { border: none; }
 /* Container, navbar, footer */
 
 nav ul {
+  font-family: "Karla", "Futura", sans-serif;
   display: block;
   width: 960px;
   margin: auto auto 25px auto;
@@ -186,6 +187,7 @@ footer {
 }
 
 .article h2 {
+	font-family: "Karla", Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
 	padding: 30px 30px 0 30px;
 }
