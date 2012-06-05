@@ -80,7 +80,7 @@ footer {
 /* Logged-in user bar, profile, alerts and such */
 
 #userbar {
-	font-size: 1em;
+	line-height: 1.6.em;
 	margin: 25px auto 25px auto;
 }
 
@@ -114,7 +114,7 @@ footer {
 
 .status {
 	font-size: 1.6em;
-	line-height: 1.6em;
+	margin: -.6em auto;
 }
 
 .open { display: block !important; }
@@ -190,7 +190,7 @@ footer {
 }
 
 .featured h2 {
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 .per-article-overlay {
