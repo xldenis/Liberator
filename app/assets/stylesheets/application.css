@@ -250,7 +250,7 @@ input, select, textarea {
   padding: 10px;
   font-size: 1.5em;
   border: none;
-  margin: none;
+  margin: 0;
   background: #e6e6e6;
 }
 
@@ -287,6 +287,9 @@ form#new_user {
 
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
 
+.user-forgot {
+	float: right;
+}
 
 label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 
