@@ -20,7 +20,7 @@ body {
   margin: auto;
 }
 
-nav ul, .article h2, #userbar, article h1 { font-family: "Karla", "Futura", sans-serif; }
+nav ul, .article h2, #userbar, article h1, form { font-family: "Karla", "Futura", sans-serif; }
 
 a { color: #0783f8; }
 
@@ -40,12 +40,12 @@ nav ul {
   overflow: auto;
   border: 1px solid black;
   background: #eee;
-  box-shadow: 0px 8px 8px -5px #4f4f4f;
+  box-shadow: 0px 4px 12px -5px #4f4f4f;
 }
 
 nav li {
   display: inline-block;
-  margin: -2px;
+  margin: 0 0 0 -2px;
   text-transform: uppercase;
 }
 
@@ -94,7 +94,7 @@ footer {
 
 .alert-message	{
   padding: 10px;
-  margin: 0 0 15px 0;
+  margin: 15px 0 15px 0;
   background: #efc4c4;
 }
 
@@ -237,24 +237,25 @@ form {
   width: 920px;
   margin: auto;
   padding: 20px;
-  background: #eee;
-  -webkit-transition: all .1 smooth 0;
+  background: rgba(255,255,255,0.7);
 }
 
 legend {
   font-size: 2em;
-  font-style: italic;
+}
+
+form ul {
+	padding: 0;
 }
 
 li {
   display: block;
 }
 
-input,select,textarea{
-  font-family: "Crimson Text", Times, "Times New Roman", serif;
+input, select, textarea {
   width: 575px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 input#user_remember_me { width: 30px; }
@@ -268,7 +269,6 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
 .btn {
   margin: auto auto auto -40px;
   display: block;
-  font-family: "Crimson Text", Times, "Times New Roman", serif;
   width: 600px;
   color: #fff;
   background: #000;
