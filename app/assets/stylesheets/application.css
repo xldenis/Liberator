@@ -252,6 +252,7 @@ input, select, textarea {
   border: none;
   margin: 0;
   background: #e6e6e6;
+  outline: none;
 }
 
 form li {
