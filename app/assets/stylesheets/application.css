@@ -48,7 +48,9 @@ nav li {
   margin: 0 0 0 -4px;
   text-transform: uppercase;
 }
-
+nav li.selected{
+  
+}
 nav li a { display: block; color: #000; padding: 20px; }
 
 nav li a:hover { color: #f3f3f3; background: #000; }
