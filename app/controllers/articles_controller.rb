@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   load_and_authorize_resource :find_by => :slug
   def index
     @article = Article.all
-    @article_months = @article.group_by { |a| a.created_at.beginning_of_month }
+    @article_months = @article.desc(:created_at).group_by { |a| a.created_at.beginning_of_month }
   end
   def create
     @article = current_user.articles.new
