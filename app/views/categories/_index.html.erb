@@ -1,10 +1,10 @@
 <% if articles %>
  	<% articles.each_with_index do |article,index| %>
-       <div <% if index==0 || index==2 %>
+       <div <% if index==0 || index ==2 %>
                class="article featured" <% else %>
                class="article secondary" <% end %>
                data-id="<%= if article then article.id else end %>"
-               style= "background:url('<%= article.image_url(:large) if article && article.image? && index == 0%>');">
+               style= "background:url('<%= article.image_url(:large) if article && article.image? && (index == 0|| index ==2)%>');">
                <% if article %>
                       <div class="per-article-overlay">
                        <h2><%= link_to article.title, article %></h2>

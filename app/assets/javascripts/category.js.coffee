@@ -4,16 +4,16 @@ $ ->
   list = $('li',"#list")
   content = $('.content')
   status = $('.status')
-
+  overlay = $('.per-article-overlay')
   ajaxsuccess = (xhr,data,status) ->
     data = eval data
     data_list = data[0]
     html = data[1]
     list.remove()
     $('#list').append data_list
-    enabledraggable()
     article.droppable "destroy"
     content.html html
+    enabledraggable()
     enabledroppable()
 
   status.live 'click',->
@@ -36,7 +36,7 @@ $ ->
 
   enabledroppable =->
     article = $('.article') 
-    article.droppable accept: "#list >li",
+    article.droppable accept: "#list >li,.article,.per-article-overlay",
       drop: (event, ui) ->
         $(@).data 'id',ui.draggable.data 'id'
         livesave()
@@ -48,11 +48,29 @@ $ ->
 
   enabledraggable=-> 
     list = $('li',"#list")
+    article= $('.article')
     list.draggable 
       cancel: "a.ui-icon",
       revert: "invalid",
       helper: "clone",
-      cursor: "move"
+      cursor: "move",
+      cursorAt:
+        top: 32,
+        left: 120
+    article.draggable
+      cancel: "a.ui-icon",
+      revert: "invalid",
+      helper: ->
+        li= $(document.createElement 'li' ).toggleClass 'dragging'
+        $(li).html $(@).find('h2>a').html()
+      cursor: "move",
+      cursorAt: 
+        left: 120,
+        top: 32
+      start: (ev)->
+        $(@).css('opacity','0')
+      stop: (ev)->
+        $(@).css('opacity','1')
     true
 
   enabledroppable()
