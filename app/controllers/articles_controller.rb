@@ -71,7 +71,6 @@ class ArticlesController < ApplicationController
   end
   end
   def crop_update
-    @article = Article.find(params[:id])
     @article.crop_x = params[:article]["crop_x"]
     @article.crop_y = params[:article]["crop_y"]
     @article.crop_h = params[:article]["crop_h"]
