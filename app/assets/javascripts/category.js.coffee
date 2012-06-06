@@ -38,7 +38,13 @@ $ ->
     article = $('.article') 
     article.droppable accept: "#list >li,.article,.per-article-overlay",
       drop: (event, ui) ->
+        window.test = event
+        window.ui = ui
+        
+
         $(@).data 'id',ui.draggable.data 'id'
+        if(ui.draggable.hasClass('article'))
+          $(ui.draggable).data 'id', 'nil'
         livesave()
       over: (event,ui) ->
         $(@).children().first().toggleClass 'overlay-edit'
@@ -68,9 +74,9 @@ $ ->
         left: 120,
         top: 32
       start: (ev)->
-        $(@).css('opacity','0')
+        $(@).find('.per-article-overlay').css('opacity','0')
       stop: (ev)->
-        $(@).css('opacity','1')
+        $(@).find('.per-article-overlay').css('opacity','1')
     true
 
   enabledroppable()

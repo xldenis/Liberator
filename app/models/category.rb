@@ -1,7 +1,9 @@
 class Category
   include Mongoid::Document
+  include Mongoid::Slug
   has_and_belongs_to_many :articles
   field :name
+  slug :name
   field :front_page_articles, :type=> Array
 def front_to_articles
   articles=[]

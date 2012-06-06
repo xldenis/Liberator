@@ -14,6 +14,7 @@ class Ability
       can :read, Category
       cannot :publish, Article
     else
+      can :home, Category
       can :read, Article
       cannot :index, Article
       can :read, Category

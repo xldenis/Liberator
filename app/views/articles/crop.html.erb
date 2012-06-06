@@ -14,7 +14,6 @@ function update_crop(coords) {
     var ry = 100/coords.h;
     var lw = $('#cropbox').width();
     var lh = $('#cropbox').height();
-  <% debugger %>
   var ratio = <%= @article.image.geometry[:width] %> / lw ;
   $('#preview').css({
     width: Math.round(rx * lw) + 'px',
