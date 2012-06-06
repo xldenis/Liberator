@@ -14,7 +14,6 @@ function update_crop(coords) {
     var ry = 100/coords.h;
     var lw = $('#cropbox').width();
     var lh = $('#cropbox').height();
-  <% debugger %>
   var ratio = <%= @article.image.geometry[:width] %> / lw ;
   $('#preview').css({
     width: Math.round(rx * lw) + 'px',
@@ -38,7 +37,7 @@ function update_crop(coords) {
     <%= image_tag @article.image_url, :id => "preview" %>
 </div>
 
-<%= form_for @article, :as => :article, :url => { :action => "crop_update", :id => @article.id} do |f| %>
+<%= form_for @article, :as => :article, :url => { :action => "crop_update", :id => @article.slug} do |f| %>
     <% for attribute in [:crop_x, :crop_y, :crop_h, :crop_w] %>
         <%= f.hidden_field attribute, :id => attribute %>
     <% end %>

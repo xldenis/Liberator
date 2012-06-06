@@ -2,14 +2,16 @@ class Article
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Document::Taggable 
+  include Mongoid::Slug
   belongs_to :user
   has_and_belongs_to_many :categories 
   mount_uploader :image, ImageUploader
 
-  validates_presence_of :title,:slug,:content
+  validates_presence_of :title,:byline,:content
   
   field :title
-  field :slug
+  slug :title
+  field :byline
   field :content
   field :published, :type => Boolean
   field :published_on, :type => Date

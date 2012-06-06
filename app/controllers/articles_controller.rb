@@ -1,17 +1,19 @@
 class ArticlesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :find_by => :slug
   def index
     @article = Article.all
-    @article_months = @article.group_by { |a| a.created_at.beginning_of_month }
+    @article_months = @article.desc(:created_at).group_by { |a| a.created_at.beginning_of_month }
   end
   def create
     @article = current_user.articles.new
    temp_params = params[:article].reject {|key,value| key == "category_ids"}
+    debugger
     if @article.update_attributes(temp_params) && @article.save
       @article.categories=[Category.find(params[:article][:category_ids])]
       @article.save
       
      flash[:success]= "Article successfully created."
+
       respond_to do |format|
        format.html{if params[:article][:image] then redirect_to crop_article_path(@article) else redirect_to @article  end } 
        format.js{redirect_to @article}
@@ -30,15 +32,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
     temp_params = params[:article].reject {|key,value| key == "category_ids"}
     @article.categories=[Category.find(params[:article][:category_ids])]
    if @article.update_attributes!(temp_params)
@@ -53,7 +52,6 @@ class ArticlesController < ApplicationController
   end
   end
   def destroy
-    @article = Article.find(params[:id])
     
       if @article.destroy
         flash[:notice] = "Article deleted."
@@ -67,14 +65,12 @@ class ArticlesController < ApplicationController
       end
   end
   def crop
-  @article = Article.find(params[:id])
   if !@article.image
     flash[:notice] = "Try uploading an image first.."
     redirect_to article_edit_path(@article)
   end
   end
   def crop_update
-    @article = Article.find(params[:id])
     @article.crop_x = params[:article]["crop_x"]
     @article.crop_y = params[:article]["crop_y"]
     @article.crop_h = params[:article]["crop_h"]
@@ -84,7 +80,7 @@ class ArticlesController < ApplicationController
   end
   def publish
     if can? :publish, Article 
-      @article = Article.find(params[:id])
+      @article = Article.find_by_slug(params[:id])
       @article.published = !@article.published
       if @article.save
         render :nothing => true

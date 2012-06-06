@@ -15,7 +15,7 @@ Category.create(:name => "Fun")
 cat = Category.create(:name =>  "News", :front_page_articles => nil)
 
 15.times do |index|
-  cat.articles.create(:title => "Article #{index}",:slug => "Slug #{index}",:content => Lorem::Base.new('paragraphs',4).output)
+  cat.articles.create(:title => "Article #{index}",:byline => "Slug #{index}",:content => Lorem::Base.new('paragraphs',4).output)
 end
 puts 'Articles Created.'
 puts 'Everything has #{Category.first.articles.count} articles in it.'
