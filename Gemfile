@@ -5,13 +5,17 @@ gem 'rails'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'mongoid'
-gem 'bson'
 gem 'bson_ext'
-gem 'redcarpet'
 gem 'carrierwave-mongoid', :require=>'carrierwave/mongoid'
+gem 'mongoid_slug'
+
+gem 'redcarpet'
+
 gem 'rmagick'
 gem 'mini_magick'
+
 gem 'fog'
+
 gem 'truncate_html'
 
 # Gems used only for assets and not required

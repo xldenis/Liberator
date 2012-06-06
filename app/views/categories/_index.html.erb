@@ -8,7 +8,7 @@
                <% if article %>
                       <div class="per-article-overlay">
                        <h2><%= link_to article.title, article %></h2>
-                       <p><%= article.slug %></p>
+                       <p><%= article.byline %></p>
                        <p><%= article.content.split(/((\r)?(\n)(\s)?){2}/).first%></p>
 </div>
 <% else %>

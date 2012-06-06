@@ -2,7 +2,7 @@
 
 <tr>
   <td><%= link_to article.title,article %></td>
-  <td><%= article.slug %> </td>
+  <td><%= article.byline %> </td>
 
   <td><% if can? :update, article%><%=link_to "Edit",edit_article_path(article)%></td>
 <% end %>
