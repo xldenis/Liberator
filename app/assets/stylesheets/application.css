@@ -280,7 +280,7 @@ form#new_user {
 }
 
 #new_user form ul {
-	width: 710px;
+	width: 520px;
 	padding: 0;
 }
 
@@ -293,6 +293,7 @@ form#new_user {
 input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
 
 .user-forgot {
+	margin: -20px auto;
 	float: right;
 	
 }
@@ -307,3 +308,10 @@ label { font-size: 1.5em; margin: 10px auto; } .hide { display: none; }
   border: none;
 }
 
+
+
+/* Backend articles table */
+
+table {
+	width: 960px;
+}
