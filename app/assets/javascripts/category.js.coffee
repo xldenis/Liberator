@@ -78,16 +78,16 @@ $ ->
       stop: (ev)->
         $(@).find('.per-article-overlay').css('opacity','1')
     true
+  if(submit)
+    enabledroppable()
+    enabledraggable()
+    article.live 'ajaxSuccess', (xhr,data,status) ->
+      ajaxsuccess(xhr,data,status)
+    submit.live 'ajax:before',->
+      $(this).data('params',{front_page_articles: serialize()})
 
-  enabledroppable()
-  enabledraggable()
-  article.live 'ajaxSuccess', (xhr,data,status) ->
-    ajaxsuccess(xhr,data,status)
-  submit.live 'ajax:before',->
-    $(this).data('params',{front_page_articles: serialize()})
-
-  submit.live 'ajax:success', (xhr,data,status) ->
-    ajaxsuccess(xhr,data,status)
+    submit.live 'ajax:success', (xhr,data,status) ->
+      ajaxsuccess(xhr,data,status)
 
   true
 
