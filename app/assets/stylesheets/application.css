@@ -221,6 +221,14 @@ footer {
   background: rgba(255,255,255,0.7);
 }
 
+.per-article-overlay :after {
+	content: "";
+	height: 15px;
+	margin: 0;
+	width: 100px;
+	background: #000;
+}
+
 .overlay-edit {
   background: #e0e0e0;
 }
@@ -233,13 +241,6 @@ footer {
 	padding: 0 30px;
 	max-height: 100px;
 	overflow: hidden;
-}
-
-.article p:after {
-	content: "";
-	height: 15px;
-	margin: 0;
-	width: 100%;
 }
 
 /* Individual article page */
