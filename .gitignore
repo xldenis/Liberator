@@ -6,3 +6,4 @@ tmp/
 *.swp
 public/uploads/
 *.sublime-workspace
+.DS_Store
