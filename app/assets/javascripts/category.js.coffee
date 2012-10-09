@@ -1,11 +1,12 @@
 $ ->
   article = $('.article')
-  submit = $('#submit')
   list = $('li',"#list")
   content = $('.content')
   status = $('.status')
   overlay = $('.per-article-overlay')
-  if submit.size()==0
+  #Only load the js if the edit action is actually opened.
+  if location.href.indexOf('edit') != -1
+    #This function corrects the list of articles and refreshes the draggable / droppable objects
     ajaxsuccess = (xhr,data,status) ->
       data = eval data
       data_list = data[0]
@@ -19,6 +20,8 @@ $ ->
 
     status.live 'click',->
       $('#layout-menu').toggleClass 'open'
+
+    #This function is responsible for the Ajax call when an object is dropped
     livesave =->
       $.ajax {
         url: location.href.substr(0,location.href.length-5 )
@@ -27,6 +30,7 @@ $ ->
         success: (data,status,xhr)->
           ajaxsuccess(xhr,data,status)
       }
+    #This function makes sure that the id of the article is included in AJAX calls
     serialize =->
       for elem in article
         do (elem) ->
@@ -34,7 +38,7 @@ $ ->
             $(elem).data('id')
           else
             "nil"
-
+    #This function makes the articles droppable targets.
     enabledroppable =->
       article = $('.article') 
       article.droppable accept: "#list >li,.article,.per-article-overlay",
@@ -51,8 +55,8 @@ $ ->
           $(@).children().first().toggleClass 'overlay-edit'
         out: (event,ui) ->
           $(@).children().first().toggleClass 'overlay-edit'
-      true
-
+        true
+    #This function is responsible for making items draggable
     enabledraggable=-> 
       list = $('li',"#list")
       article= $('.article')
@@ -79,16 +83,9 @@ $ ->
         stop: (ev)->
           $(@).find('.per-article-overlay').css('opacity','1')
       true
-
+    #Initialize the draggable objects
     enabledroppable()
     enabledraggable()
-    article.live 'ajaxSuccess', (xhr,data,status) ->
-      ajaxsuccess(xhr,data,status)
-    submit.live 'ajax:before',->
-      $(this).data('params',{front_page_articles: serialize()})
-
-    submit.live 'ajax:success', (xhr,data,status) ->
-      ajaxsuccess(xhr,data,status)
 
 
 
