@@ -180,7 +180,7 @@ footer {
 
 
 
-/* Article tile & article page layout */
+/* Article tiles */
 
 .article {
   display: inline-block;
@@ -225,8 +225,16 @@ footer {
 	padding: 0 30px;
 	max-height: 100px;
 	overflow: hidden;
-	text-overflow: ellipsis;
 }
+
+.article p:after {
+	content: "";
+	height: 15px;
+	margin: 0;
+	width: 100%;
+}
+
+/* Individual article page */
 
 article {
 	width: 720px;

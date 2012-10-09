@@ -45,8 +45,6 @@ $ ->
         drop: (event, ui) ->
           window.test = event
           window.ui = ui
-          
-
           $(@).data 'id',ui.draggable.data 'id'
           if(ui.draggable.hasClass('article'))
             $(ui.draggable).data 'id', 'nil'
@@ -86,6 +84,4 @@ $ ->
     #Initialize the draggable objects
     enabledroppable()
     enabledraggable()
-
-
 
