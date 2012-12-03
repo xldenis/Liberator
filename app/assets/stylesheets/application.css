@@ -79,7 +79,7 @@ footer {
 
 /* Logged-in user bar, profile, alerts and such */
 
-#userbar {
+#userbar{
 	line-height: 1.6em;
 	margin: 20px auto;
 }
@@ -188,13 +188,14 @@ footer {
   width: 240px;
   height: 240px;
   margin: 0;
+  background: #FFF;
   background: rgba(255,255,255,0);
 }
 
 .featured {
   display: block;
   width: 720px;
-  height: 240px;
+  height: 480px;
   margin: -2px auto;
 }
 
@@ -204,6 +205,13 @@ footer {
 
 .secondary h2 {
 	font-size: 1.3em;
+}
+
+.feature-container{
+  width:720px;
+  height:480px;
+  display:inline-block;
+  float:left;
 }
 
 .per-article-overlay {
@@ -300,7 +308,7 @@ form#new_user {
   width: 670px;
 }
 
-input#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
+#user_remember_me { margin: 15px auto 15px auto; width: 30px; }
 
 .user-forgot {
 	margin: -20px auto;
