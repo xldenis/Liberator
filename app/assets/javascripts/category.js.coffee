@@ -34,8 +34,14 @@ $ ->
         else
           "nil"
 
-    status.live 'click',->
-      $('#layout-menu').toggleClass 'open'
+  enabledroppable =->
+    article = $('.article') 
+    article.droppable accept: "#list >li,.article,.per-article-overlay",
+      drop: (event, ui) ->
+        window.test = event
+        window.ui = ui
+        
+
         $(@).data 'id',ui.draggable.data 'id'
         if(ui.draggable.hasClass('article'))
           $(ui.draggable).data 'id', 'nil'
