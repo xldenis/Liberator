@@ -1,35 +1,22 @@
 <% if articles %>
- 	<% articles.each_with_index do |article,index| %>
-       <div <% if index==0 || index ==2 %>
-               class="article featured" <% else %>
-               class="article secondary" <% end %>
-               data-id="<%= if article then article.id else end %>"
-               style= "background:url('<%= article.image_url(:large) if article && article.image? && (index == 0|| index ==2)%>');">
-               <% if article %>
-                      <div class="per-article-overlay">
-                       <h2><%= link_to article.title, article %></h2>
-                       <p><%= article.byline %></p>
-                       <p><%= article.content.split(/((\r)?(\n)(\s)?){2}/).first%></p>
-</div>
-<% else %>
-              <div class="per-article-overlay"> 
-               <h2>Placeholder Title</h2>
-               <p>Dummy text.</p>
-              </div>
-       <% end %>
-       </div>
-
+<div class="feature-container">
+<% articles.first(2).each_with_index do |article,index| %>
+  <%= render partial: "article", locals:{article:article,featured:true,visible:index.zero?} %>
 <% end %>
-  
+</div>
+<% articles.last(articles.length-2).each do |article| %>
+  <%= render :partial=>"article",:locals=>{article:article,featured:false,visible:true} %>
+<% end %>
+
 <% else %>
-       <% 19.times do |index|%>
-               <div <% if index==0 || index==2 %>
-                       class="article featured" <% else %>
-                       class="article secondary" <% end %>>
-                       <div class="per-article-overlay">
-                        <h2>Placeholder Title</h2>
-                        <p>Dummy text.</p>
-                       </div>
-               </div>
-       <% end %>
-       <% end %>
+<% 20.times do |index|%>
+  <div <% if index==0 || index==2 %>
+  class="article featured" <% else %>
+    class="article secondary" <% end %>>
+    <div class="per-article-overlay">
+    <h2>Placeholder Title</h2>
+    <p>Dummy text.</p>
+    </div>
+    </div>
+  <% end %>
+<% end %>

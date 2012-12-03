@@ -1,10 +1,10 @@
 $ ->
   article = $('.article')
-  submit = $('#submit')
   list = $('li',"#list")
   content = $('.content')
   status = $('.status')
   overlay = $('.per-article-overlay')
+
   ajaxsuccess = (xhr,data,status) ->
     data = eval data
     data_list = data[0]
@@ -78,16 +78,17 @@ $ ->
       stop: (ev)->
         $(@).find('.per-article-overlay').css('opacity','1')
     true
-  if(submit)
-    enabledroppable()
-    enabledraggable()
-    article.live 'ajaxSuccess', (xhr,data,status) ->
-      ajaxsuccess(xhr,data,status)
-    submit.live 'ajax:before',->
-      $(this).data('params',{front_page_articles: serialize()})
+  
+  enabledroppable()
+  enabledraggable()
+  article.live 'ajaxSuccess', (xhr,data,status) ->
+    ajaxsuccess(xhr,data,status)
+  setInterval ->
+    a = $(".featured:hidden").first()
+    $(".featured:visible").first().fadeToggle "slow", ->
+      a.fadeToggle("slow")
 
-    submit.live 'ajax:success', (xhr,data,status) ->
-      ajaxsuccess(xhr,data,status)
+  ,10000
 
-  true
+
 
