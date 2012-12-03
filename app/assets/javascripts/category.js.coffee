@@ -78,7 +78,8 @@ $ ->
       stop: (ev)->
         $(@).find('.per-article-overlay').css('opacity','1')
     true
-  
+  if location.href.indexOf('edit') == -1
+    return
   enabledroppable()
   enabledraggable()
   article.live 'ajaxSuccess', (xhr,data,status) ->
