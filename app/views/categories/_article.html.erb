@@ -3,7 +3,7 @@
   class="article featured" <% else %>
     class="article secondary" <% end %>
     data-id="<%= if article then article.id else end %>"
-    style= "background:url('<%= article.image_url(:large) if article && article.image? && (index == 0|| index ==2)%>');
+    style= "background:url('<%= article.image_url(:large) if article && article.image? && featured%>');
             <%= if !visible then "display:none;" end %> ">    
     <% if article %>
     <div class="per-article-overlay">
